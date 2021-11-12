@@ -2,7 +2,9 @@ import React, { useContext } from 'react';
 import { AppContext } from '../../App/AppContextProvider';
 
 const CurrentFact = () => {
-  const { currentFact, moveToRecentFacts, addOrRemoveSavedFact } = useContext(AppContext);
+  const { currentFact, moveToRecentFacts, addOrRemoveSavedFact, displayButtonText } = useContext(AppContext);
+
+  let buttonText = displayButtonText(currentFact);
 
   return (
     <section className='current-fact__container'>
@@ -14,7 +16,7 @@ const CurrentFact = () => {
           className='current-fact__button save-fact'
           onClick={() => addOrRemoveSavedFact(currentFact)}
         >
-          💜
+          { buttonText }
         </button>
         <button
           className='current-fact__button new-fact'

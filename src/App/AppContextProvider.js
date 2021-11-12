@@ -31,9 +31,15 @@ const AppContextProvider = ({ children }) => {
     }
   }
 
+  const displayButtonText = (fact) => {
+    return savedFacts.includes(fact)
+      ? '💔'
+      : '💜'
+  }
+
   const value = {
     user, currentFact, recentFacts, savedFacts, paletteMode, language, allLanguages,
-    setUser, setCurrentFact, setRecentFacts, moveToRecentFacts, setSavedFacts, addOrRemoveSavedFact, setPaletteMode, setLanguage
+    setUser, setCurrentFact, setRecentFacts, moveToRecentFacts, setSavedFacts, addOrRemoveSavedFact, displayButtonText, setPaletteMode, setLanguage
   }
 
   useEffect(() => {
