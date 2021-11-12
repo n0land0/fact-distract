@@ -1,0 +1,18 @@
+main {
+  width: 100%;
+  height: 100%;
+  @include flex-column();
+  @include center-xy();
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  @include flex-row();
+  justify-content: space-between;
+}
+
+.turkey-logo {
+  @include square-logo(2rem);
+}
