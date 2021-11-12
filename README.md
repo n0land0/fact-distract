@@ -55,18 +55,12 @@ The repository for the Sniff API can be found [here](https://github.com/n0land0/
 
 ## Wins
 
-- Moving beyond MVP into extensions - e.g. implementing Google Maps API, creating 3 Postgres tables, adding DELETE functionality
-- Building our first complete backend with Knex and PostgresQL
-- Working with dev/production environments for our database
-- Using Context API for the first time in a section of the project
-- Integrating the map with the location dropdown of the playdate form & the browser's built-in geolocation functionality
+- Building with Context from the beginning of the project
+- Hitting the ground running with Router 6 just a couple days after it was released
 
 ## Challenges
 
-- This project was scoped for a larger group, but one of our members came down with COVID at the beginning and had to drop out - trying to make up for that with 2 people proved challenging
-- Self-teaching Knex and PostgresQL in a day while building our first table-style database
-- Resources for using Knex were very hard to come by so it was hard to find anyone to reach out to - we were mostly on our own with the documentation
-- Troubleshooting some obscure Heroku-specific bugs related to SSL permissions
+-
 
 ## Install/ Set Up Instructions
 
@@ -88,10 +82,7 @@ If you'd like to run this repo locally:
 
 ## Future Features
 
-- Ability to create and log in a user
-- Ability to approve or reject requested playdates
-- Socket-based messaging
-- Expanding coverage to other areas besides Denver
+- 
 
 ## Contributors
 
