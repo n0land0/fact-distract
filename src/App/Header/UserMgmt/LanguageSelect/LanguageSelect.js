@@ -3,8 +3,7 @@ import { AppContext } from '../../../AppContextProvider';
 
 const LanguageSelect = () => {
   const {
-    currentFact, recentFacts, savedFacts, paletteMode, language, allLanguages,
-    setCurrentFact, setRecentFacts, setSavedFacts, setPaletteMode, setLanguage
+    language, allLanguages, setLanguage
   } = useContext(AppContext);
 
   const languageOptions = allLanguages.map(langAbbrev =>
@@ -12,8 +11,9 @@ const LanguageSelect = () => {
   )
 
   const handleChange = (event) => {
-    const { name, value } = event.target;
-    if (name === 'language') { setLanguage(value) };
+    // const { name, value } = event.target;
+    // if (name === 'language') { setLanguage(value) };
+    setLanguage(event.target.value);
   }
 
   return (
