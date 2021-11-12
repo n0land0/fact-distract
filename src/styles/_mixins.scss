@@ -19,3 +19,18 @@
   width: $value;
   height: $value;
 }
+
+@mixin fix-location($location) {
+  position: fixed;
+  #{$location}: 0;
+}
+
+@mixin input-styling() {
+  padding: 1rem;
+  margin: .5rem 0;
+  border: none;
+  border-radius: $button-corners;
+  font-size: 1rem;
+  font-family: $button-font;
+  color: $button-font-color;
+}

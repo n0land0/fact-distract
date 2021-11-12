@@ -1,10 +1,21 @@
 import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+import { AppContext } from '../../AppContextProvider';
+import LanguageSelect from './LanguageSelect/LanguageSelect';
+import PaletteMode from './PaletteMode/PaletteMode';
 
 const UserMgmt = () => {
+  const {
+    user, setUser
+  } = useContext(AppContext);
 
   return (
-    <h2>Hello, User!</h2>
+    <article class='user-mgmt-container'>
+      <h2>Hello, { user }!</h2>
+      <LanguageSelect />
+      <PaletteMode />
+      <button>that's not my name</button>
+    </article>
   )
 }
 

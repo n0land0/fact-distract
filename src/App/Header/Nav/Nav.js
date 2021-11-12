@@ -4,11 +4,11 @@ import { NavLink } from 'react-router-dom';
 const Nav = () => {
 
   return (
-    <nav>
-      <NavLink to='/generate' className='generate-link' activeClassName='navlink-active'>
+    <nav className='navbar'>
+      <NavLink to='/generate' className='navbar__navlink' activeClassName='navlink-active'>
         new fact
       </NavLink>
-      <NavLink to='/saved' className='saved-link' activeClassName='navlink-active'>
+      <NavLink to='/saved' className='navbar__navlink' activeClassName='navlink-active'>
         saved facts
       </NavLink>
     </nav>

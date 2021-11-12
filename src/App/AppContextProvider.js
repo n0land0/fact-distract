@@ -4,6 +4,7 @@ import fetchCalls from '../fetchCalls';
 export const AppContext = createContext();
 
 const AppContextProvider = ({ children }) => {
+  const [ user, setUser ] = useState('Hingle McCringleberry');
   const [ currentFact, setCurrentFact ] = useState('');
   const [ recentFacts, setRecentFacts ] = useState([
     "Swag thundercats 3 wolf moon, mumblecore paleo pop-up pickled vegan fixie before they sold out tbh",
@@ -13,10 +14,11 @@ const AppContextProvider = ({ children }) => {
   const [ savedFacts, setSavedFacts ] = useState([]);
   const [ paletteMode, setPaletteMode ] = useState('dark');
   const [ language, setLanguage ] = useState('en');
+  const allLanguages = ['en', 'de'];
 
   const value = {
-    currentFact, recentFacts, savedFacts, paletteMode,
-    setCurrentFact, setRecentFacts, setSavedFacts, setPaletteMode
+    user, currentFact, recentFacts, savedFacts, paletteMode, language, allLanguages,
+    setUser, setCurrentFact, setRecentFacts, setSavedFacts, setPaletteMode, setLanguage
   }
 
   useEffect(() => {
@@ -34,9 +36,9 @@ const AppContextProvider = ({ children }) => {
 export default AppContextProvider;
 
 
-// import AppContext from
+// import { AppContext } from
 //
 // const {
-//   currentFact, recentFacts, savedFacts, paletteMode,
-//   setCurrentFact, setRecentFacts, setSavedFacts, setPaletteMode
+//   user, currentFact, recentFacts, savedFacts, paletteMode, language, allLanguages,
+//   setUser, setCurrentFact, setRecentFacts, setSavedFacts, setPaletteMode, setLanguage
 // } = useContext(AppContext);

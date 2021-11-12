@@ -1,0 +1,18 @@
+$title-font: 'Roboto', sans-serif;
+$title-font-color: 'blue';
+$body-font: 'Roboto', sans-serif;;
+$body-font-color: 'blue';
+$button-font: 'Roboto', sans-serif;
+$button-font-color: 'blue';
+
+$background-color: '';
+$elements-bkgd-color: rgba(186, 168, 152, 0.6);
+
+$main-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+$main-text-shadow: 1.5px 1.5px 2px #474747;
+
+$button-corners: 10px;
+$transition-button: all 0.2s ease-in-out;
+
+$gradient-header: linear-gradient(0deg, $elements-bkgd-color 63%, rgba(255, 255, 255, 0) 100%);
+$gradient-nav: linear-gradient(180deg, $elements-bkgd-color 63%, rgba(255, 255, 255, 0) 100%);

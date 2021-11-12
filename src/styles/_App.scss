@@ -7,12 +7,33 @@ main {
 
 header {
   width: 100%;
-  position: fixed;
-  top: 0;
+  @include fix-location(top);
   @include flex-row();
-  justify-content: space-between;
+  // @include center-xy();
+  justify-content: center;
 }
 
 .turkey-logo {
   @include square-logo(2rem);
+  @include fix-location(left);
+}
+
+nav {
+  width: 20%;
+  @include flex-row();
+  justify-content: space-around;
+}
+
+.navbar__navlink {
+  color: rgba(244, 143, 152, 0.6);
+}
+
+.active {
+  text-decoration: underline;
+  color: red;
+}
+
+.user-mgmt-container {
+  @include fix-location(right);
+  @include flex-column();
 }

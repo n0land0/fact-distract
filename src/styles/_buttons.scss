@@ -1,0 +1,14 @@
+button {
+  transition: $transition-button;
+  @include input-styling();
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.025);
+  }
+}
+
+.inactive {
+  cursor: default;
+  filter: brightness(50%);
+  pointer-events: none;
+}
