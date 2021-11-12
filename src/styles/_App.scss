@@ -16,3 +16,7 @@ header {
 .turkey-logo {
   @include square-logo(2rem);
 }
+
+.user-mgmt-container {
+  @include flex-column();
+}
