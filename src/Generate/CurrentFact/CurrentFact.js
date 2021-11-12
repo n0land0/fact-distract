@@ -2,18 +2,17 @@ import React, { useContext } from 'react';
 import { AppContext } from '../../App/AppContextProvider';
 
 const CurrentFact = () => {
-  const {
-    user, currentFact, recentFacts, savedFacts, paletteMode, language, allLanguages,
-    setUser, setCurrentFact, setRecentFacts, moveToRecentFacts, setSavedFacts, addToSavedFacts, setPaletteMode, setLanguage
-   } = useContext(AppContext);
+  const { currentFact, moveToRecentFacts, addOrRemoveSavedFact } = useContext(AppContext);
 
   return (
     <section className='current-fact__container'>
+    { currentFact
+      ? <>
       <p className='current-fact__text'>{ currentFact }</p>
       <article className='current-fact__buttons-container'>
         <button
           className='current-fact__button save-fact'
-          onClick={() => addToSavedFacts(currentFact)}
+          onClick={() => addOrRemoveSavedFact(currentFact)}
         >
           💜
         </button>
@@ -24,6 +23,9 @@ const CurrentFact = () => {
           new fact
         </button>
       </article>
+    </>
+    : <h2 className='loading-message'>loading factoid...</h2>
+    }
     </section>
   )
 }
