@@ -21,9 +21,9 @@ const CurrentFact = () => {
   return (
     <section className='current-fact__container'>
       <p className='current-fact__text'>{ currentFact }</p>
-      <article className='current-fact__buttons'>
-        <button onClick={() => addToSavedFacts(currentFact)}>💜</button>
-        <button onClick={() => moveToRecentFacts(currentFact)}>new fact</button>
+      <article className='current-fact__buttons-container'>
+        <button className='current-fact__button save-fact' onClick={() => addToSavedFacts(currentFact)}>💜</button>
+        <button className='current-fact__button new-fact' onClick={() => moveToRecentFacts(currentFact)}>new fact</button>
       </article>
     </section>
   )
