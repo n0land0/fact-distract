@@ -4,7 +4,7 @@ import fetchCalls from '../fetchCalls';
 export const AppContext = createContext();
 
 const AppContextProvider = ({ children }) => {
-  const [ user, setUser ] = useState('');
+  const [ user, setUser ] = useState('Hingle McCringleberry');
   const [ currentFact, setCurrentFact ] = useState('');
   const [ recentFacts, setRecentFacts ] = useState([
     "Swag thundercats 3 wolf moon, mumblecore paleo pop-up pickled vegan fixie before they sold out tbh",
