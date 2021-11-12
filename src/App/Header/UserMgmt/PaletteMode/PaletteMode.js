@@ -3,8 +3,7 @@ import { AppContext } from '../../../AppContextProvider';
 
 const PaletteMode = () => {
   const {
-    currentFact, recentFacts, savedFacts, paletteMode, language, allLanguages,
-    setCurrentFact, setRecentFacts, setSavedFacts, setPaletteMode, setLanguage
+    paletteMode, setPaletteMode
   } = useContext(AppContext);
 
   const newPalette = paletteMode === 'dark'
