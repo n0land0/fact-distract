@@ -16,9 +16,20 @@ const AppContextProvider = ({ children }) => {
   const [ language, setLanguage ] = useState('en');
   const allLanguages = ['en', 'de'];
 
+  const moveToRecentFacts = (fact) => {
+    // Context's useEffect is watching recentFacts, so this triggers a new fetch
+    setRecentFacts([fact, recentFacts[0], recentFacts[1]])
+  }
+
+  const addToSavedFacts = (fact) => {
+    if (!savedFacts.includes(fact)) {
+      setSavedFacts([fact, ...savedFacts])
+    }
+  }
+
   const value = {
     user, currentFact, recentFacts, savedFacts, paletteMode, language, allLanguages,
-    setUser, setCurrentFact, setRecentFacts, setSavedFacts, setPaletteMode, setLanguage
+    setUser, setCurrentFact, setRecentFacts, moveToRecentFacts, setSavedFacts, addToSavedFacts, setPaletteMode, setLanguage
   }
 
   useEffect(() => {
