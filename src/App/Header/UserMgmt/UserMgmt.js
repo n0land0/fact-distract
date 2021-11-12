@@ -5,10 +5,6 @@ import LanguageSelect from './LanguageSelect/LanguageSelect';
 import PaletteMode from './PaletteMode/PaletteMode';
 
 const UserMgmt = () => {
-  // const {
-  //   currentFact, recentFacts, savedFacts, paletteMode, language, allLanguages,
-  //   setCurrentFact, setRecentFacts, setSavedFacts, setPaletteMode, setLanguage
-  // } = useContext(AppContext);
 
   return (
     <article class='user-mgmt-container'>
