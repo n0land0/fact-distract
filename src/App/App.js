@@ -1,8 +1,7 @@
 import React, { useContext } from 'react';
 import { Routes, Route, Outlet } from 'react-router-dom';
 import AppContextProvider from './AppContextProvider';
-import Generate from '../Generate/Generate';
-// import AppRoutes from './AppRoutes';
+import Header from './Header/Header';
 
 
 const App = () => {
@@ -10,7 +9,7 @@ const App = () => {
   return (
     <AppContextProvider>
       <main>
-        <h1>Hello World!</h1>
+        <Header />
         <Outlet />
       </main>
     </AppContextProvider>
