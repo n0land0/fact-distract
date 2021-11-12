@@ -13,10 +13,11 @@ const AppContextProvider = ({ children }) => {
   const [ savedFacts, setSavedFacts ] = useState([]);
   const [ paletteMode, setPaletteMode ] = useState('dark');
   const [ language, setLanguage ] = useState('en');
+  const allLanguages = ['en', 'de'];
 
   const value = {
-    currentFact, recentFacts, savedFacts, paletteMode,
-    setCurrentFact, setRecentFacts, setSavedFacts, setPaletteMode
+    currentFact, recentFacts, savedFacts, paletteMode, language, allLanguages,
+    setCurrentFact, setRecentFacts, setSavedFacts, setPaletteMode, setLanguage
   }
 
   useEffect(() => {
@@ -34,7 +35,7 @@ const AppContextProvider = ({ children }) => {
 export default AppContextProvider;
 
 
-// import AppContext from
+// import { AppContext } from
 //
 // const {
 //   currentFact, recentFacts, savedFacts, paletteMode,
