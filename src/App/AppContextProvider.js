@@ -24,7 +24,7 @@ const AppContextProvider = ({ children }) => {
   useEffect(() => {
     fetchCalls.getNewFact(language)
       .then(newFact => setCurrentFact(newFact))
-  }, [])
+  }, [ recentFacts ])
 
   return (
     <AppContext.Provider value={value}>
