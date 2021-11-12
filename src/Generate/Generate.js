@@ -1,11 +1,14 @@
 import React, { useContext } from 'react';
+import CurrentFact from './CurrentFact/CurrentFact';
+import RecentFacts from './RecentFacts/RecentFacts';
 
 const Generate = () => {
 
   return (
-    <section>
-      <h1>generate!</h1>
-    </section>
+    <>
+      <CurrentFact />
+      <RecentFacts />
+    </>
   )
 }
 
