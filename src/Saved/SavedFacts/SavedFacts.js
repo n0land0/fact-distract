@@ -8,9 +8,9 @@ const SavedFacts = () => {
   const savedFactItems = savedFacts.map(fact => <SavedFactItem fact={fact}/>);
 
   return (
-    <>
+    <section className='saved-facts-container'>
       { savedFactItems }
-    </>
+    </section>
   )
 }
 
