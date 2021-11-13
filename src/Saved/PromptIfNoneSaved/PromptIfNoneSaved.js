@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { AppContext } from '../../App/AppContextProvider';
 
 const PromptIfNoneSaved = () => {
@@ -8,9 +9,12 @@ const PromptIfNoneSaved = () => {
   } = useContext(AppContext);
 
   return (
-    <>
-
-    </>
+    <section className='prompt-container'>
+      <h2 className='prompt__text'>you haven't saved any facts yet!</h2>
+      <Link to='/generate'>
+        <button className='prompt__go-home-btn'>let's go do that</button>
+      </Link>
+    </section>
   )
 }
 
