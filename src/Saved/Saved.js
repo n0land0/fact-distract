@@ -1,11 +1,18 @@
 import React, { useContext } from 'react';
+import { AppContext } from '../App/AppContextProvider';
+import SavedFacts from './SavedFacts/SavedFacts';
+import PromptIfNoneSaved from './PromptIfNoneSaved/PromptIfNoneSaved';
 
 const Saved = () => {
+  const { savedFacts } = useContext(AppContext);
 
   return (
-    <section>
-      <h1>saved!</h1>
-    </section>
+    <>
+      { savedFacts.length
+        ? <SavedFacts />
+        : <PromptIfNoneSaved />
+      }
+    </>
   )
 }
 
