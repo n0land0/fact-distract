@@ -66,5 +66,5 @@ export default AppContextProvider;
 //
 // const {
 //   user, currentFact, recentFacts, savedFacts, paletteMode, language, allLanguages,
-//   setUser, setCurrentFact, setRecentFacts, setSavedFacts, setPaletteMode, setLanguage
+//   setUser, setCurrentFact, setRecentFacts, setSavedFacts, addOrRemoveSavedFact, displayButtonText, setPaletteMode, setLanguage
 // } = useContext(AppContext);
