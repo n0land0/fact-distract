@@ -8,8 +8,8 @@ const App = () => {
 
   return (
     <AppContextProvider>
+      <Header />
       <main>
-        <Header />
         <Outlet />
       </main>
     </AppContextProvider>
