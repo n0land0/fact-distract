@@ -13,7 +13,7 @@ render(
   <Router>
     <Routes>
       <Route path='/' element={ <App /> }>
-        <Route path='generate' element={ <Generate /> } />
+        <Route index element={ <Generate /> } />
         <Route path='saved' element={ <Saved /> } />
         <Route path='*' element={ <h1>404!</h1> } />
       </Route>

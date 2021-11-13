@@ -12,9 +12,9 @@ const AppContextProvider = ({ children }) => {
     "Chicharrones drinking vinegar tilde master cleanse snackwave adaptogen DIY tattooed"
   ]);
   const [ savedFacts, setSavedFacts ] = useState([
-    "I'm baby ramps synth chartreuse street art pork belly, tofu banh mi iPhone small batch photo booth farm-to-table beard selvage lomo PBR&B",
-    "Sriracha dreamcatcher cronut tbh quinoa organic butcher keytar pour-over cloud bread offal ethical occupy bitters",
-    "Green juice pork belly lumbersexual direct trade kombucha jean shorts roof party shoreditch bitters umami everyday carry lyft intelligentsia tofu"
+    // "I'm baby ramps synth chartreuse street art pork belly, tofu banh mi iPhone small batch photo booth farm-to-table beard selvage lomo PBR&B",
+    // "Sriracha dreamcatcher cronut tbh quinoa organic butcher keytar pour-over cloud bread offal ethical occupy bitters",
+    // "Green juice pork belly lumbersexual direct trade kombucha jean shorts roof party shoreditch bitters umami everyday carry lyft intelligentsia tofu"
   ]);
   const [ paletteMode, setPaletteMode ] = useState('dark');
   const [ language, setLanguage ] = useState('en');

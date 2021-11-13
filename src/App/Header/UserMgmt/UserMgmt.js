@@ -10,8 +10,8 @@ const UserMgmt = () => {
   } = useContext(AppContext);
 
   return (
-    <article class='user-mgmt-container'>
-      <h2>Hello, { user }!</h2>
+    <article className='user-mgmt-container'>
+      <h2 className='user-mgmt__greeting'>Hello, { user }!</h2>
       <LanguageSelect />
       <PaletteMode />
       <button>that's not my name</button>
