@@ -7,11 +7,15 @@ const AppContextProvider = ({ children }) => {
   const [ user, setUser ] = useState('Hingle McCringleberry');
   const [ currentFact, setCurrentFact ] = useState('');
   const [ recentFacts, setRecentFacts ] = useState([
-    // "Swag thundercats 3 wolf moon, mumblecore paleo pop-up pickled vegan fixie before they sold out tbh",
-    // "Offal jianbing palo santo, shabby chic semiotics vape organic art party affogato poutine vice vinyl banh mi.",
-    // "Chicharrones drinking vinegar tilde master cleanse snackwave adaptogen DIY tattooed"
+    "Swag thundercats 3 wolf moon, mumblecore paleo pop-up pickled vegan fixie before they sold out tbh",
+    "Offal jianbing palo santo, shabby chic semiotics vape organic art party affogato poutine vice vinyl banh mi.",
+    "Chicharrones drinking vinegar tilde master cleanse snackwave adaptogen DIY tattooed"
   ]);
-  const [ savedFacts, setSavedFacts ] = useState([]);
+  const [ savedFacts, setSavedFacts ] = useState([
+    "I'm baby ramps synth chartreuse street art pork belly, tofu banh mi iPhone small batch photo booth farm-to-table beard selvage lomo PBR&B",
+    "Sriracha dreamcatcher cronut tbh quinoa organic butcher keytar pour-over cloud bread offal ethical occupy bitters",
+    "Green juice pork belly lumbersexual direct trade kombucha jean shorts roof party shoreditch bitters umami everyday carry lyft intelligentsia tofu"
+  ]);
   const [ paletteMode, setPaletteMode ] = useState('dark');
   const [ language, setLanguage ] = useState('en');
   const allLanguages = ['en', 'de'];
