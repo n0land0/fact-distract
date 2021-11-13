@@ -10,6 +10,7 @@ const CurrentFact = () => {
     <section className='current-fact__container'>
     { currentFact
       ? <>
+      <p className='current-fact__did-you-know'>did you know?</p>
       <p className='current-fact__text'>{ currentFact }</p>
       <article className='current-fact__buttons-container'>
         <button
