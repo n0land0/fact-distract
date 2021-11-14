@@ -1,9 +1,15 @@
 import React, { createContext, useState, useEffect, useReducer } from 'react';
+import { Outlet } from 'react-router-dom';
+import styled, { ThemeProvider } from 'styled-components';
+import { darkMode, lightMode, GlobalStyles } from '../styles/palettes';
 import fetchCalls from '../fetchCalls';
+import Header from './Header/Header';
 
 export const AppContext = createContext();
 
-const AppContextProvider = ({ children }) => {
+const StyledApp = styled.main``;
+
+const App = ({ children }) => {
   const [ user, setUser ] = useState('Hingle McCringleberry');
   const [ currentFact, setCurrentFact ] = useState('');
   const [ recentFacts, setRecentFacts ] = useState([
@@ -41,9 +47,14 @@ const AppContextProvider = ({ children }) => {
       : '💜'
   }
 
+  const togglePalette = () => {
+    paletteMode === 'dark'
+      ? setPaletteMode('light')
+      : setPaletteMode('dark')
+  }
+
   const value = {
-    user, currentFact, recentFacts, savedFacts, paletteMode, language, allLanguages,
-    setUser, setCurrentFact, setRecentFacts, moveToRecentFacts, setSavedFacts, addOrRemoveSavedFact, displayButtonText, setPaletteMode, setLanguage
+    user, currentFact, recentFacts, savedFacts, language, allLanguages, setUser, setCurrentFact, setRecentFacts, moveToRecentFacts, setSavedFacts, addOrRemoveSavedFact, displayButtonText, setLanguage, paletteMode, setPaletteMode, togglePalette
   }
 
   useEffect(() => {
@@ -57,13 +68,19 @@ const AppContextProvider = ({ children }) => {
   }, [ recentFacts ])
 
   return (
-    <AppContext.Provider value={value}>
-      { children }
+    <AppContext.Provider value={ value }>
+      <ThemeProvider theme={ paletteMode === 'dark' ? darkMode : lightMode}>
+        <GlobalStyles />
+        <Header />
+        <StyledApp>
+          <Outlet />
+        </StyledApp>
+      </ThemeProvider>
     </AppContext.Provider>
   )
 }
 
-export default AppContextProvider;
+export default App;
 
 
 // import { AppContext } from
