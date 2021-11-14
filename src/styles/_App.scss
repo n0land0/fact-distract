@@ -14,7 +14,7 @@ header {
 }
 
 .turkey-logo {
-  @include square-logo(2rem);
+  @include square-logo(8rem);
   @include fix-location(left);
 }
 
