@@ -34,3 +34,7 @@
   font-family: $button-font;
   color: $button-font-color;
 }
+
+@mixin background-gradient($colorLeft, $colorRight) {
+  background-image: linear-gradient(to right, $colorLeft, $colorRight);
+}

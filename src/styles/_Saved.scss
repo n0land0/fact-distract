@@ -3,7 +3,7 @@
 }
 
 .saved-facts__header {
-  
+
 }
 
 .saved-fact-item {
@@ -19,11 +19,12 @@
 }
 
 .prompt-container {
-
+  @include flex-column();
+  @include center-xy();
 }
 
 .prompt__text {
-
+  font-size: 3rem;
 }
 
 .prompt__go-home-btn {

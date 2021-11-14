@@ -1,9 +1,11 @@
-button {
+button,
+.navbar__navlink {
   transition: $transition-button;
   @include input-styling();
+  font-weight: bolder;
   &:hover {
     cursor: pointer;
-    transform: scale(1.025);
+    transform: scale(1.015);
   }
 }
 
@@ -13,10 +15,38 @@ button {
   pointer-events: none;
 }
 
+.current-fact__buttons-container {
+  @include flex-row();
+  height: 4.5rem;
+}
+
 .current-fact__button {
 
 }
 
 .recent-fact__button {
 
+}
+
+.save-fact {
+  padding: .95rem;
+  &:hover {
+    padding: 0.7rem;
+  }
+  &:hover .heart-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.new-fact:hover {
+  padding: .78rem;
+  transition: $transition-button;
+  font-size: 1.1rem;
+}
+
+.heart-icon {
+  transition: $transition-button;
+  width: 1rem;
+  height: 1rem;
 }

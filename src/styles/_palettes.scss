@@ -1,0 +1,17 @@
+// dark mode
+body .body-dark {
+  @include background-gradient(#B789A2, #E1B7C2)
+}
+
+.turkey-logo {
+  filter: invert(1) opacity(0.4) $main-drop-shadow;
+}
+
+// light mode
+body .body-light {
+  @include background-gradient(#B789A2, #E1B7C2)
+}
+
+.turkey-logo {
+  filter: invert(1) opacity(0.4) $main-drop-shadow;
+}

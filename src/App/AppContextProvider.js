@@ -4,6 +4,8 @@ import styled, { ThemeProvider } from 'styled-components';
 import { darkMode, lightMode, GlobalStyles } from '../styles/palettes';
 import fetchCalls from '../fetchCalls';
 import Header from './Header/Header';
+import heart from '../assets/heart.png';
+import brokenHeart from '../assets/broken_heart.png';
 
 export const AppContext = createContext();
 
@@ -22,7 +24,10 @@ const App = ({ children }) => {
     // "Sriracha dreamcatcher cronut tbh quinoa organic butcher keytar pour-over cloud bread offal ethical occupy bitters",
     // "Green juice pork belly lumbersexual direct trade kombucha jean shorts roof party shoreditch bitters umami everyday carry lyft intelligentsia tofu"
   ]);
-  const [ paletteMode, setPaletteMode ] = useState('dark');
+  // const [ paletteMode, setPaletteMode ] = useState('dark');
+  const [ paletteMode, setPaletteMode ] = useState(
+    localStorage.getItem('paletteMode') ? localStorage.getItem('paletteMode') : 'dark'
+  );
   const [ language, setLanguage ] = useState('en');
   const allLanguages = ['en', 'de'];
 
@@ -36,21 +41,26 @@ const App = ({ children }) => {
     if (savedFacts.includes(fact)) {
       const filteredFacts = savedFacts.filter(savedFact => savedFact !== fact);
       setSavedFacts(filteredFacts);
+      // saveButtonStatus = 'save-fact';
     } else {
       setSavedFacts([fact, ...savedFacts]);
+      // saveButtonStatus = 'unsave-fact';
     }
   }
 
   const displayButtonText = (fact) => {
     return savedFacts.includes(fact)
-      ? '💔'
-      : '💜'
+      ? brokenHeart
+      : heart
   }
 
   const togglePalette = () => {
+    console.log(paletteMode)
     paletteMode === 'dark'
       ? setPaletteMode('light')
       : setPaletteMode('dark')
+      console.log(paletteMode)
+      // localStorage.setItem('paletteMode', paletteMode)
   }
 
   const value = {
@@ -75,6 +85,10 @@ const App = ({ children }) => {
         <StyledApp>
           <Outlet />
         </StyledApp>
+        <footer>
+          <h1 className='page-title'>fact • distract</h1>
+          <h1 className='page-title-shadow'>fact • distract</h1>
+        </footer>
       </ThemeProvider>
     </AppContext.Provider>
   )
@@ -86,6 +100,5 @@ export default App;
 // import { AppContext } from
 //
 // const {
-//   user, currentFact, recentFacts, savedFacts, paletteMode, language, allLanguages,
-//   setUser, setCurrentFact, setRecentFacts, setSavedFacts, addOrRemoveSavedFact, displayButtonText, setPaletteMode, setLanguage
+//  user, currentFact, recentFacts, savedFacts, language, allLanguages, setUser, setCurrentFact, setRecentFacts, moveToRecentFacts, setSavedFacts, addOrRemoveSavedFact, displayButtonText, setLanguage, paletteMode, setPaletteMode, togglePalette
 // } = useContext(AppContext);

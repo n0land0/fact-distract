@@ -2,6 +2,8 @@
 @import '_variables';
 @import '_mixins';
 @import '_buttons';
+@import '_palettes';
+@import '_toggle';
 @import '_App';
 @import '_Generate';
 @import '_Saved';
@@ -13,7 +15,9 @@ html {
 body {
   width: 100vw;
   height: 100vh;
-  // font-family: $main-font;
+  transition: background 2s ease;
+  // background: $gradient-main;
+  font-family: $body-font;
 }
 
 #root {

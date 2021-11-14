@@ -1,54 +1,95 @@
+.generate-container {
+  @include flex-row();
+  flex-direction: row-reverse;
+}
+
 // current
+.current-fact__container {
+  width: 45vw;
+  margin: 2.5vw;
+  @include flex-column();
+  @include center-xy();
+  // border-radius: 1rem;
+  // box-shadow: $main-box-shadow;
+}
+
 .loading-message {
-  font-size: 3rem;
+  font-family: $header-font;
+  font-size: 5rem;
   color: pink;
 }
 
-.current-fact__container {
-
-}
-
 .current-fact__did-you-know {
-  
+  font-size: 1.75rem;
 }
 
 .current-fact__text {
-
-}
-
-.current-fact__buttons-container {
-
+  font-size: 2.25rem;
+  text-align: center;
+  margin: 1rem 0;
 }
 
 // recents
 .recent-facts-container {
-
+  width: 45vw;
+  height: 65vh;
+  margin: 2.5vw;
+  @include flex-column();
+  // border: 2px solid black;
+  border-radius: 1rem;
+  box-shadow: $main-box-shadow;
 }
 
 .recent-facts__header {
+  // align-self: center;
+  position: absolute;
+  width: 0;
+  height: 0;
+  font-size: 3rem;
+  padding: 1rem;
+}
 
+.recent-fact-1__container,
+.recent-fact-2__container,
+.recent-fact-3__container {
+  @include flex-row();
+  // justify-content: center;
+  @include center-xy();
 }
 
 .recent-fact-1__container {
-
-}
-
-.recent-fact-1__text {
-
+  // border-bottom: 2px solid black;
+  // border-left: 2px solid black;
+  width: 55%;
+  height: 33%;
+  align-self: flex-end;
+  text-align: right;
+  border-radius: 0 1rem 0 0;
 }
 
 .recent-fact-2__container {
-
-}
-
-.recent-fact-2__text {
-
+  // border: 2px solid black;
+  // border-left: 2px solid black;
+  // border-right: 2px solid black;
+  width: 55%;
+  height: 34%;
+  align-self: center;
+  text-align: center;
+  border-radius: 1rem 0;
 }
 
 .recent-fact-3__container {
-
+  // border-top: 2px solid black;
+  // border-right: 2px solid black;
+  width: 55%;
+  height: 33%;
+  align-self: flex-start;
+  border-radius: 0 0 0 1rem;
 }
 
-.recent-fact-3__text {
 
+.recent-fact-1__text,
+.recent-fact-2__text,
+.recent-fact-3__text {
+  padding: 1rem;
 }
