@@ -1,8 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import App from './App/App';
-import AppContextProvider from './App/AppContextProvider';
+import App from './App/AppContextProvider';
 import Generate from './Generate/Generate';
 import Saved from './Saved/Saved';
 import './styles/base.scss';
