@@ -26,9 +26,9 @@ Saved facts page (mobile)
 
 <img width="375" alt="Screen Shot 2021-11-15 at 12 27 13 AM" src="https://user-images.githubusercontent.com/79823098/141739622-8c4d2679-7f4a-4a1d-8f20-d1b3856f23e9.png">
 
-
-1. The landing page of the app is a dashboard view, from which a user can view all of their scheduled past and present (upcoming) playdates
-2. From this same dashboard view, a user may choose to cancel/remove any playdates from their private profile page and/or search for potential new "matches", perusing through other profiles on the site for users who present as good fits for a doggie playdate
+Landing page - user can generate and save new dumb facts and view their recent history
+Saved facts page - user can see facts they've previously saved
+Dropdown menu - user can toggle between two color modes (sunrise & dusk)
 
 ## Technologies
 
