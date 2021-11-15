@@ -1,9 +1,11 @@
-button {
+button,
+.navbar__navlink {
   transition: $transition-button;
   @include input-styling();
+  font-weight: bolder;
   &:hover {
     cursor: pointer;
-    transform: scale(1.025);
+    transform: scale(1.015);
   }
 }
 
@@ -13,10 +15,61 @@ button {
   pointer-events: none;
 }
 
+.menu-icon {
+  width: 2rem;
+  height: 2rem;
+  @include flex-column;
+  align-items: center;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
+.menu-line-1,
+.menu-line-2,
+.menu-line-3 {
+  display: flex;
+  position: relative;
+  width: 2rem;
+  height: .25rem;
+  margin: .2rem;
+  border-radius: 3px;
+  //   transform-origin: 1px;
+}
+
+.current-fact__buttons-container {
+  @include flex-row();
+  height: 4.5rem;
+}
+
 .current-fact__button {
 
 }
 
 .recent-fact__button {
 
+}
+
+.save-fact,
+.saved-fact__unsave-fact-button {
+  padding: .95rem;
+  &:hover {
+    padding: 0.7rem;
+  }
+  &:hover .heart-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.new-fact:hover {
+  padding: .78rem;
+  transition: $transition-button;
+  font-size: 1.1rem;
+}
+
+.heart-icon {
+  transition: $transition-button;
+  width: 1rem;
+  height: 1rem;
 }

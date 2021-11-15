@@ -19,7 +19,7 @@ const RecentFacts = () => {
           className='recent-fact__button save-fact'
           onClick={ () => addOrRemoveSavedFact(recentFact1) }
         >
-          { buttonText1 }
+          <img className='heart-icon' src={ buttonText1 } />
         </button>
       </article> }
       { recentFact2 && <article className='recent-fact-2__container'>
@@ -28,7 +28,7 @@ const RecentFacts = () => {
           className='recent-fact__button save-fact'
           onClick={ () => addOrRemoveSavedFact(recentFact2) }
         >
-          { buttonText2 }
+          <img className='heart-icon' src={ buttonText2 } />
         </button>
       </article> }
       { recentFact3 && <article className='recent-fact-3__container'>
@@ -37,7 +37,7 @@ const RecentFacts = () => {
           className='recent-fact__button save-fact'
           onClick={ () => addOrRemoveSavedFact(recentFact3) }
         >
-          { buttonText3 }
+          <img className='heart-icon' src={ buttonText3 } />
         </button>
       </article> }
     </section>

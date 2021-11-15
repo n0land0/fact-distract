@@ -8,6 +8,7 @@ const SavedFactItem = ({ fact }) => {
   } = useContext(AppContext);
 
   const thisFact = savedFacts.find(savedFact => savedFact === fact);
+  let buttonText = displayButtonText(thisFact);
 
   return (
     <article className='saved-fact-item'>
@@ -15,7 +16,9 @@ const SavedFactItem = ({ fact }) => {
       <button
         className='saved-fact__unsave-fact-button'
         onClick={ () => addOrRemoveSavedFact(thisFact) }
-      >💔</button>
+      >
+        <img className='heart-icon' src={ buttonText } />
+      </button>
     </article>
   )
 }

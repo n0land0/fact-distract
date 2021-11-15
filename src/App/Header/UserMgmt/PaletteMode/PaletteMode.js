@@ -3,23 +3,28 @@ import { AppContext } from '../../../AppContextProvider';
 
 const PaletteMode = () => {
   const {
-    paletteMode, setPaletteMode
+    paletteMode, togglePalette
   } = useContext(AppContext);
 
   const newPalette = paletteMode === 'dark'
     ? 'light'
     : 'dark';
 
-  const togglePalette = () => {
-    setPaletteMode(newPalette);
-  }
-
   return (
-    <button
-      onClick={togglePalette}
-    >
-      { newPalette } mode
-    </button>
+    <div className='toggle-switch'>
+      <input
+       type='checkbox'
+       className='toggle-switch-checkbox'
+       name='paletteToggle'
+       id='paletteToggle'
+       checked={ paletteMode === 'dark' }
+       onChange={ togglePalette }
+      />
+      <label className='toggle-switch-label' htmlFor='paletteToggle'>
+        <span className='toggle-switch-inner' />
+        <span className='toggle-switch-switch' />
+      </label>
+    </div>
   )
 }
 

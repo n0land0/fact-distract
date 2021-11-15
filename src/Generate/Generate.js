@@ -5,10 +5,10 @@ import RecentFacts from './RecentFacts/RecentFacts';
 const Generate = () => {
 
   return (
-    <>
+    <section className='generate-container'>
       <CurrentFact />
       <RecentFacts />
-    </>
+    </section>
   )
 }
 

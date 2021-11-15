@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { AppContext } from '../../AppContextProvider';
 import LanguageSelect from './LanguageSelect/LanguageSelect';
 import PaletteMode from './PaletteMode/PaletteMode';
+import MenuIcon from './MenuIcon/MenuIcon';
 
 const UserMgmt = () => {
   const {
@@ -10,11 +11,14 @@ const UserMgmt = () => {
   } = useContext(AppContext);
 
   return (
-    <article className='user-mgmt-container'>
-      <h2 className='user-mgmt__greeting'>Hello, { user }!</h2>
-      <LanguageSelect />
-      <PaletteMode />
-      <button>that's not my name</button>
+    <article className='menu'>
+      <MenuIcon />
+      <article className='user-mgmt-container'>
+        <h2 className='user-mgmt__greeting'>Hello, { user }!</h2>
+        <LanguageSelect />
+        <p className='viewing-in'>currently viewing in</p>
+        <PaletteMode />
+      </article>
     </article>
   )
 }

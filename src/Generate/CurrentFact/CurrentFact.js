@@ -17,7 +17,7 @@ const CurrentFact = () => {
           className='current-fact__button save-fact'
           onClick={() => addOrRemoveSavedFact(currentFact)}
         >
-          { buttonText }
+          <img className='heart-icon' src={ buttonText } />
         </button>
         <button
           className='current-fact__button new-fact'
