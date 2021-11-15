@@ -6,17 +6,20 @@ Sniff is a service for Denver-based dog owners looking to find friends for their
 
 ## Snapshots of Application
 
-DASHBOARD VIEW:
+Landing page (sunrise mode)
+<img width="2560" alt="Screen Shot 2021-11-15 at 12 22 04 AM" src="https://user-images.githubusercontent.com/79823098/141739059-08b35a49-00c1-4e14-93b3-5d2fa222d4fc.png">
 
-![landing page/dashboard](https://i.imgur.com/2oxQTCz.png)
+Landing page (dusk mode)
+<img width="2560" alt="Screen Shot 2021-11-15 at 12 22 15 AM" src="https://user-images.githubusercontent.com/79823098/141739162-e6aaf1c8-0f20-4528-9167-1114354f4eca.png">
 
-BROWSE PROFILES VIEW:
+Landing page (mobile)
+<img width="378" alt="Screen Shot 2021-11-15 at 12 25 15 AM" src="https://user-images.githubusercontent.com/79823098/141739583-ea70ab65-44b6-427c-9cd8-8bef2505942b.png">
 
-![playdate scheduling](https://i.imgur.com/uMSUS0z.png)
+Saved facts page
+<img width="2560" alt="Screen Shot 2021-11-15 at 12 22 39 AM" src="https://user-images.githubusercontent.com/79823098/141739192-6088f19a-af92-4190-ac0e-abf3eef023ba.png">
 
-PROFILE VIEW WITH MAP AND PLAYDATE FORM:
-
-![profile](https://user-images.githubusercontent.com/79823098/140982299-33d72e18-f544-4352-90dc-90a0282d71a0.png)
+Saved facts page (mobile)
+<img width="375" alt="Screen Shot 2021-11-15 at 12 27 13 AM" src="https://user-images.githubusercontent.com/79823098/141739622-8c4d2679-7f4a-4a1d-8f20-d1b3856f23e9.png">
 
 
 1. The landing page of the app is a dashboard view, from which a user can view all of their scheduled past and present (upcoming) playdates
@@ -42,11 +45,9 @@ PROFILE VIEW WITH MAP AND PLAYDATE FORM:
 ### Dependencies
 
 - Bootstrapped with [Create React App](https://create-react-app.dev/)
-- [Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/overview)
-- [@react-google-maps/api](https://www.npmjs.com/package/@react-google-maps/api)
-- [dayjs](https://www.npmjs.com/package/dayjs)
-- [combobox](https://www.npmjs.com/package/combobox)
-- [use-places-autocomplete](https://www.npmjs.com/package/use-places-autocomplete)
+- [GSAP](https://greensock.com/get-started/)
+- [react-elastic-carousel](https://www.npmjs.com/package/react-elastic-carousel)
+- [Styled Components](https://styled-components.com/)
 
 
 ## Back End Repository
