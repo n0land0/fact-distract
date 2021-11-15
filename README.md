@@ -53,6 +53,7 @@ Saved facts page (mobile)
 - [GSAP](https://greensock.com/get-started/)
 - [react-elastic-carousel](https://www.npmjs.com/package/react-elastic-carousel)
 - [Styled Components](https://styled-components.com/)
+- [Random Useless Facts API](https://uselessfacts.jsph.pl/)
 
 ## Wins
 
@@ -67,21 +68,18 @@ Saved facts page (mobile)
 
 ## Install/ Set Up Instructions
 
-The deployed app can be viewed [here](https://sniff-app.surge.sh/).
+The deployed app can be viewed [here](fact-distract.surge.sh).
 
 If you'd like to run this repo locally:
 
-1. Clone down this repository using the following command:
-  ```
-  git clone git@github.com:n0land0/sniff.git
-  ```
+1. Clone down this repository
 2. In your terminal, run:
   ```
   npm install
   npm start
   ```
-3. Enter the following url in your browser: http://localhost:3000/
-4. Explore the website...adventure awaits! HUZZAH!
+3. If you're not automatically navigated to `localhost:3000` from your terminal, visit it in your browser
+4. Get ready to learn some dumb facts
 
 ## Future Features
 
