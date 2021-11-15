@@ -16,8 +16,9 @@ const SavedFactItem = ({ fact }) => {
       <button
         className='saved-fact__unsave-fact-button'
         onClick={ () => addOrRemoveSavedFact(thisFact) }
+        aria-label='unsave this fact'
       >
-        <img className='heart-icon' src={ buttonText } />
+        <img className='heart-icon' src={ buttonText } alt='heart icon' />
       </button>
     </article>
   )

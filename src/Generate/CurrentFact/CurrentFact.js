@@ -16,12 +16,14 @@ const CurrentFact = () => {
         <button
           className='current-fact__button save-fact'
           onClick={() => addOrRemoveSavedFact(currentFact)}
+          aria-label='save or unsave this fact'
         >
-          <img className='heart-icon' src={ buttonText } />
+          <img className='heart-icon' src={ buttonText } alt='heart icon' />
         </button>
         <button
           className='current-fact__button new-fact'
           onClick={() => moveToRecentFacts(currentFact)}
+          aria-label='new fact'
         >
           new fact
         </button>
