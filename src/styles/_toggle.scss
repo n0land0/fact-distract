@@ -6,7 +6,7 @@
 
 .toggle-switch {
   position: relative;
-  width: 8rem;
+  width: 9rem;
   display: inline-block;
   vertical-align: middle;
   -webkit-user-select: none;
@@ -42,7 +42,7 @@
       box-sizing: border-box;
     }
     &:before {
-      content: 'dark mode';
+      content: 'dusk mode';
       padding-left: .4rem;
       background-color: #474747;
       color: #fff;
@@ -58,7 +58,7 @@
     }
   }
   &-inner:after {
-    content: 'light mode';
+    content: 'sunrise mode';
     padding-right: .4rem;
     background-color: #bbb;
     color: #fff;
@@ -73,7 +73,7 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    right: 6.6rem;
+    right: 7.6rem;
     border: 0 solid #bbb;
     border-radius: 1rem;
     transition: all 0.3s ease-in 0s;

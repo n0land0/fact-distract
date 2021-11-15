@@ -72,15 +72,15 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .menu:hover .menu-line-1 {
-    background-color: ${ props => props.theme.recentsBodyColor };
+    background-color: ${ props => props.theme.saveButtonColor };
   }
 
   .menu:hover .menu-line-2 {
-    background-color: ${ props => props.theme.recentsBodyColor };
+    background-color: ${ props => props.theme.saveButtonColor };
   }
 
   .menu:hover .menu-line-3 {
-    background-color: ${ props => props.theme.recentsBodyColor };
+    background-color: ${ props => props.theme.saveButtonColor };
   }
 
   .menu-line-1 {
@@ -112,7 +112,8 @@ export const GlobalStyles = createGlobalStyle`
     color: ${ props => props.theme.newButtonFontColor };
   }
 
-  .save-fact {
+  .save-fact,
+  .saved-fact__unsave-fact-button {
     background: ${ props => props.theme.saveButtonColor };
   }
 
@@ -139,5 +140,10 @@ export const GlobalStyles = createGlobalStyle`
 
   .prompt__text {
     color: ${ props => props.theme.promptFontColor };
+  }
+
+  .saved-facts-container {
+    background: ${ props => props.theme.recent2Background };
+    color: ${ props => props.theme.currentBodyColor };
   }
 `

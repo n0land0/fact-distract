@@ -1,17 +1,37 @@
 .saved-facts-container {
-
+  @include responsive('width', '60%', (
+    375px: 90%
+  ))
+  @include responsive('height', 50vh, (
+    375px: 70vh
+  ))
+  @include flex-column();
+  @include center-xy();
+  padding: 0 1rem;
+  box-shadow: $main-box-shadow;
 }
 
 .saved-facts__header {
-
+  position: relative;
+  bottom: 3rem;
+  font-size: 1.5rem;
 }
 
 .saved-fact-item {
-
+  display: flex;
+  @include responsive('flex-direction', 'row', (
+    375px: 'column'
+  ))
+  // @include flex-row();
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .saved-fact-item__text {
-
+  @include responsive('font-size', 2rem, (
+    375px: 1.5rem
+  ))
 }
 
 .saved-fact__unsave-fact-button {

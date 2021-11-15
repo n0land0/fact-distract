@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../../App/AppContextProvider';
 import SavedFactItem from './SavedFactItem/SavedFactItem';
+import Carousel from 'react-elastic-carousel';
 
 const SavedFacts = () => {
   const { savedFacts } = useContext(AppContext);
@@ -10,7 +11,9 @@ const SavedFacts = () => {
   return (
     <section className='saved-facts-container'>
       <h2 className='saved-facts__header'>my saved facts</h2>
-      { savedFactItems }
+      <Carousel>
+        { savedFactItems }
+      </Carousel>
     </section>
   )
 }

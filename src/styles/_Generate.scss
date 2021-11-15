@@ -1,14 +1,38 @@
 .generate-container {
-  @include flex-row();
-  flex-direction: row-reverse;
+  display: flex;
+  // @include flex-row();
+  // flex-direction: row-reverse;
+  @include responsive('height', 71.5%, (
+  375px: 80vh
+  ))
+  @include responsive('flex-direction', 'row-reverse', (
+    375px: 'column'
+  ))
+  @include responsive('align-items', 'none', (
+    375px: 'center'
+  ))
+  // @include responsive('width', )
+}
+
+.current-fact__container,
+.recent-facts-container {
+  @include responsive('width', 45vw, (
+    375px: 90%
+  ))
+  @include responsive('margin', 2.5vw, (
+    375px: .5rem
+  ))
 }
 
 // current
 .current-fact__container {
-  width: 45vw;
-  margin: 2.5vw;
+  // width: 45vw;
+  // margin: 2.5vw;
   @include flex-column();
   @include center-xy();
+  @include responsive('height', 51.5rem, (
+    375px: 28rem
+  ))
   // border-radius: 1rem;
   // box-shadow: $main-box-shadow;
 }
@@ -33,14 +57,14 @@
 
 // recents
 .recent-facts-container {
-  width: 45vw;
+  // width: 45vw;
   height: 65vh;
-  margin: 2.5vw;
+  // margin: 2.5vw;
   @include flex-column();
   // border: 2px solid black;
   border-radius: 1rem;
   box-shadow: $main-box-shadow;
-  transition: $transition-main;
+  transition: $transition-button;
 }
 
 .recent-facts__header {
@@ -48,7 +72,9 @@
   position: absolute;
   width: 0;
   height: 0;
-  font-size: 3rem;
+  @include responsive('font-size', 3rem, (
+    375px: 2rem
+  ));
   padding: 1rem;
 }
 
@@ -58,13 +84,16 @@
   @include flex-row();
   // justify-content: center;
   @include center-xy();
+  @include responsive('width', 55%, (
+    375px: 75%
+  ))
   transition: $transition-button;
 }
 
 .recent-fact-1__container {
   // border-bottom: 2px solid black;
   // border-left: 2px solid black;
-  width: 55%;
+  // width: 55%;
   height: 33%;
   align-self: flex-end;
   text-align: right;
@@ -75,7 +104,7 @@
   // border: 2px solid black;
   // border-left: 2px solid black;
   // border-right: 2px solid black;
-  width: 55%;
+  // width: 55%;
   height: 34%;
   align-self: center;
   text-align: center;
@@ -85,7 +114,7 @@
 .recent-fact-3__container {
   // border-top: 2px solid black;
   // border-right: 2px solid black;
-  width: 55%;
+  // width: 55%;
   height: 33%;
   align-self: flex-start;
   border-radius: 0 0 0 1rem;
@@ -96,4 +125,7 @@
 .recent-fact-2__text,
 .recent-fact-3__text {
   padding: 1rem;
+  @include responsive('font-size', '1rem', (
+    375px: '1.25rem'
+  ))
 }

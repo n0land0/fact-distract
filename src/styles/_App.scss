@@ -72,7 +72,9 @@ footer {
 .page-title,
 .page-title-shadow {
   font-family: $title-font;
-  font-size: 7rem;
+  @include responsive('font-size', 7rem, (
+    375px: 5rem
+  ))
 }
 
 .page-title-shadow {

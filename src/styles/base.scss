@@ -1,5 +1,6 @@
 @import '_reset';
 @import '_variables';
+@import '_responsive';
 @import '_mixins';
 @import '_buttons';
 @import '_palettes';
@@ -9,7 +10,12 @@
 @import '_Saved';
 
 html {
-  font-size: 1vw;
+  // font-size: 1vw;
+  @include responsive('font-size', 1vw,
+    (
+      375px: 10px,
+    )
+  )
 }
 
 body {

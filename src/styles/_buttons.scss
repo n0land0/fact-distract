@@ -50,7 +50,8 @@ button,
 
 }
 
-.save-fact {
+.save-fact,
+.saved-fact__unsave-fact-button {
   padding: .95rem;
   &:hover {
     padding: 0.7rem;
