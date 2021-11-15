@@ -11,7 +11,7 @@ export const AppContext = createContext();
 
 const StyledApp = styled.main``;
 
-const App = ({ children }) => {
+const App = () => {
   const [ user, setUser ] = useState('Hingle McCringleberry');
   const [ currentFact, setCurrentFact ] = useState('');
   const [ recentFacts, setRecentFacts ] = useState([
@@ -20,9 +20,9 @@ const App = ({ children }) => {
     "Chicharrones drinking vinegar tilde master cleanse snackwave adaptogen DIY tattooed"
   ]);
   const [ savedFacts, setSavedFacts ] = useState([
-    // "I'm baby ramps synth chartreuse street art pork belly, tofu banh mi iPhone small batch photo booth farm-to-table beard selvage lomo PBR&B",
-    // "Sriracha dreamcatcher cronut tbh quinoa organic butcher keytar pour-over cloud bread offal ethical occupy bitters",
-    // "Green juice pork belly lumbersexual direct trade kombucha jean shorts roof party shoreditch bitters umami everyday carry lyft intelligentsia tofu"
+    "I'm baby ramps synth chartreuse street art pork belly, tofu banh mi iPhone small batch photo booth farm-to-table beard selvage lomo PBR&B",
+    "Sriracha dreamcatcher cronut tbh quinoa organic butcher keytar pour-over cloud bread offal ethical occupy bitters",
+    "Green juice pork belly lumbersexual direct trade kombucha jean shorts roof party shoreditch bitters umami everyday carry lyft intelligentsia tofu"
   ]);
   // const [ paletteMode, setPaletteMode ] = useState('dark');
   const [ paletteMode, setPaletteMode ] = useState(
@@ -63,8 +63,10 @@ const App = ({ children }) => {
       // localStorage.setItem('paletteMode', paletteMode)
   }
 
+  const [ open, setOpen ] = useState(false);
+
   const value = {
-    user, currentFact, recentFacts, savedFacts, language, allLanguages, setUser, setCurrentFact, setRecentFacts, moveToRecentFacts, setSavedFacts, addOrRemoveSavedFact, displayButtonText, setLanguage, paletteMode, setPaletteMode, togglePalette
+    user, currentFact, recentFacts, savedFacts, language, allLanguages, setUser, setCurrentFact, setRecentFacts, moveToRecentFacts, setSavedFacts, addOrRemoveSavedFact, displayButtonText, setLanguage, paletteMode, setPaletteMode, togglePalette, open, setOpen
   }
 
   useEffect(() => {

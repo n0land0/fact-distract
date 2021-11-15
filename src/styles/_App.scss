@@ -39,7 +39,12 @@ nav {
 }
 
 .user-mgmt-container {
-  @include fix-location(right);
+  display: none;
+  // @include fix-location(right);
+  // @include flex-column();
+}
+
+.menu-icon:hover .user-mgmt-container {
   @include flex-column();
 }
 
