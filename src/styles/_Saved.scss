@@ -22,17 +22,18 @@
 .saved-fact-item {
   height: 15rem;
   display: flex;
-  @include responsive('flex-direction', 'row', (
+  @include responsive('flex-direction', 'column', (
     1200px: 'column',
     375px: 'column',
   ));
   // @include flex-row();
   align-items: center;
   text-align: center;
+  overflow-y: scroll;
 }
 
 .saved-fact-item__text {
-  @include responsive('font-size', 2rem, (
+  @include responsive('font-size', 1.75rem, (
     800px: 1.5rem,
     375px: 1.5rem,
   ));

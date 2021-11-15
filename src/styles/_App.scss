@@ -17,13 +17,14 @@ header {
 }
 
 .turkey-logo {
+  @include square-logo(5rem);
+  @include fix-location(left);
+  margin-left: 1rem;
   background-image: url('../assets/turkey1.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  @include square-logo(5rem);
-  @include fix-location(left);
-  margin-left: 1rem;
+  filter: invert(1) opacity(0.4) $main-drop-shadow;
 }
 
 nav {
