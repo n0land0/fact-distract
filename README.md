@@ -64,7 +64,7 @@ Dropdown menu - user can toggle between two color modes (sunrise & dusk)
 ## Challenges
 
 - Data coming from this API frequently contained inconsistent punctuation, curious formatting, wildly varied sentence length, and some extremely long words; this required a thorough data-cleaning function tacked onto the fetch call to make responses consistently presentable on the page
-- Had to take a couple days off, as a very full work slate and extremely taxing previous project had led to serious burnout
+- Had to take a couple days off, as a very full work slate and extremely taxing previous project had led to serious burnout, so this project timeline was shorter than I'd have liked
 
 ## Install/ Set Up Instructions
 
@@ -83,7 +83,7 @@ If you'd like to run this repo locally:
 
 ## Future Features
 
-- 
+-
 
 ## Contributors
 
