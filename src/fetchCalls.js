@@ -4,20 +4,7 @@ const fetchCalls = {
       .then(response => response.json())
       .then(factObj => factObj.text)
       .then(factText =>
-        factText.trim().split('').map((char, index, array) => {
-          if (char === "`") {
-            char = "'"
-          } else if ((char === "." || char === "!") && index >= array.length - 2) {
-            char = ""
-          }
-          return char
-        }).join('')
-        .split(' ').map(word => {
-          if (word.length > 20) {
-            word = word.substr(0, word.length/2) + '-' + word.substr(word.length/2, word.length)
-          }
-          return word
-        }).join(' ')
+        this.cleanResponse(factText)
       )
   },
 
