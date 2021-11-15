@@ -10,7 +10,6 @@ const SavedFacts = () => {
 
   return (
     <section className='saved-facts-container'>
-      <h2 className='saved-facts__header'>my saved facts</h2>
       <Carousel>
         { savedFactItems }
       </Carousel>

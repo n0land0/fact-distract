@@ -3,25 +3,30 @@
   // @include flex-row();
   // flex-direction: row-reverse;
   @include responsive('height', 71.5%, (
-  375px: 80vh
-  ))
+    1200px: 80vh,
+    375px: 80vh,
+  ));
   @include responsive('flex-direction', 'row-reverse', (
-    375px: 'column'
-  ))
+    1200px: 'column',
+    375px: 'column',
+  ));
   @include responsive('align-items', 'none', (
-    375px: 'center'
-  ))
+    1200px: 'center',
+    375px: 'center',
+  ));
   // @include responsive('width', )
 }
 
 .current-fact__container,
 .recent-facts-container {
   @include responsive('width', 45vw, (
-    375px: 90%
-  ))
+    1200px: 90%,
+    375px: 90%,
+  ));
   @include responsive('margin', 2.5vw, (
-    375px: .5rem
-  ))
+    1200px: .5rem,
+    375px: .5rem,
+  ));
 }
 
 // current
@@ -30,9 +35,10 @@
   // margin: 2.5vw;
   @include flex-column();
   @include center-xy();
-  @include responsive('height', 51.5rem, (
-    375px: 28rem
-  ))
+  @include responsive('height', '', (
+    1200px: 28rem,
+    375px: 28rem,
+  ));
   // border-radius: 1rem;
   // box-shadow: $main-box-shadow;
 }
@@ -73,7 +79,8 @@
   width: 0;
   height: 0;
   @include responsive('font-size', 3rem, (
-    375px: 2rem
+    800px: 2rem,
+    375px: 2rem,
   ));
   padding: 1rem;
 }
@@ -85,8 +92,9 @@
   // justify-content: center;
   @include center-xy();
   @include responsive('width', 55%, (
-    375px: 75%
-  ))
+    1200px: 75%,
+    375px: 75%,
+  ));
   transition: $transition-button;
 }
 
@@ -126,6 +134,8 @@
 .recent-fact-3__text {
   padding: 1rem;
   @include responsive('font-size', '1rem', (
-    375px: '1.25rem'
-  ))
+    1200px: '1.5rem',
+    800px: '1.25rem',
+    375px: '1.15rem',
+  ));
 }

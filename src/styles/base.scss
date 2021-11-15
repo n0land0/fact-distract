@@ -11,18 +11,15 @@
 
 html {
   // font-size: 1vw;
-  @include responsive('font-size', 1vw,
-    (
-      375px: 10px,
-    )
-  )
+  @include responsive('font-size', 1vw,(
+    375px: 10px,
+    800px: 11px
+  ));
 }
 
 body {
   width: 100vw;
   height: 100vh;
-  transition: background 2s ease;
-  // background: $gradient-main;
   font-family: $body-font;
 }
 
