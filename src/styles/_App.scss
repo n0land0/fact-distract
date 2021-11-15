@@ -39,13 +39,26 @@ nav {
 }
 
 .user-mgmt-container {
+  height: 10rem;
   display: none;
-  // @include fix-location(right);
-  // @include flex-column();
+  position: absolute;
+  top: 5rem;
+  right: 0;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  transition: $transition-main;
 }
 
-.menu-icon:hover .user-mgmt-container {
+.menu {
   @include flex-column();
+  @include fix-location(right);
+  margin-right: 2rem;
+  padding: 1rem;
+  &:hover .user-mgmt-container {
+    display: flex;
+  }
 }
 
 footer {

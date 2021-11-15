@@ -16,16 +16,13 @@ button,
 }
 
 .menu-icon {
-  position: absolute;
-  top: 1rem;
-  right: 2rem;
-  @include flex-column;
-  align-self: flex-end;
-  margin: 1rem;
   width: 2rem;
   height: 2rem;
+  @include flex-column;
+  align-items: center;
   background: transparent;
   padding: 0;
+  border-radius: 0;
 }
 
 .menu-line-1,

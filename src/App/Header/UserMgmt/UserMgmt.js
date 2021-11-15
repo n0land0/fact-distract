@@ -11,14 +11,15 @@ const UserMgmt = () => {
   } = useContext(AppContext);
 
   return (
-    <>
-    <MenuIcon />
-    <article className='user-mgmt-container'>
-      <h2 className='user-mgmt__greeting'>Hello, { user }!</h2>
-      <LanguageSelect />
-      <PaletteMode />
+    <article className='menu'>
+      <MenuIcon />
+      <article className='user-mgmt-container'>
+        <h2 className='user-mgmt__greeting'>Hello, { user }!</h2>
+        <LanguageSelect />
+        <p className='viewing-in'>currently viewing in</p>
+        <PaletteMode />
+      </article>
     </article>
-    </>
   )
 }
 

@@ -67,6 +67,22 @@ export const GlobalStyles = createGlobalStyle`
     color: ${ props => props.theme.navLinkFontColorActive };
   }
 
+  .menu:hover {
+    background-color: #ECEAEC;
+  }
+
+  .menu:hover .menu-line-1 {
+    background-color: ${ props => props.theme.recentsBodyColor };
+  }
+
+  .menu:hover .menu-line-2 {
+    background-color: ${ props => props.theme.recentsBodyColor };
+  }
+
+  .menu:hover .menu-line-3 {
+    background-color: ${ props => props.theme.recentsBodyColor };
+  }
+
   .menu-line-1 {
     background-color: ${ props => props.theme.menuLineColor };
   }
@@ -77,6 +93,10 @@ export const GlobalStyles = createGlobalStyle`
 
   .menu-line-3 {
     background-color: ${ props => props.theme.menuLineColor };
+  }
+
+  .user-mgmt-container {
+    background-color: #ECEAEC;
   }
 
   .current-fact__text {

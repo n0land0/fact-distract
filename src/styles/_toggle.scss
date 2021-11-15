@@ -1,3 +1,9 @@
+.viewing-in {
+  margin-bottom: -1rem;
+  font-size: .75rem;
+  text-align: center;
+}
+
 .toggle-switch {
   position: relative;
   width: 8rem;
@@ -36,10 +42,11 @@
       box-sizing: border-box;
     }
     &:before {
-      content: 'dark';
+      content: 'dark mode';
       padding-left: .4rem;
       background-color: #474747;
       color: #fff;
+      vertical-align: middle;
     }
   }
   &-disabled {
@@ -51,11 +58,12 @@
     }
   }
   &-inner:after {
-    content: 'light';
+    content: 'light mode';
     padding-right: .4rem;
     background-color: #bbb;
     color: #fff;
     text-align: right;
+    vertical-align: middle;
   }
   &-switch {
     display: block;
