@@ -5,7 +5,7 @@ const Logo = () => {
 
   return (
     <>
-      <img className='turkey-logo' src={turkeyLogo} alt='turkey logo' />
+      <article className='turkey-logo' />
     </>
   )
 }
