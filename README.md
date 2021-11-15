@@ -61,7 +61,7 @@ The repository for the Sniff API can be found [here](https://github.com/n0land0/
 
 ## Challenges
 
--
+- Data coming from this API frequently contained inconsistent punctuation, curious formatting, wildly varied sentence length, and some extremely long words; this required a thorough data-cleaning function tacked onto the fetch call to make responses consistently presentable on the page
 
 ## Install/ Set Up Instructions
 
