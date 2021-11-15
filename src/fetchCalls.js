@@ -13,7 +13,7 @@ const fetchCalls = {
     return fact.trim().split('').map((char, index, array) => {
       if (char === "`") {
         char = "'"
-      } else if ((char === "." || char === "!") && index >= array.length - 2) {
+      } else if ((char === "." || char === "!" || char === ",") && index >= array.length - 2) {
         char = ""
       }
       return char
