@@ -11,20 +11,48 @@ header {
   height: 7rem;
   @include fix-location(top);
   @include flex-row();
-  // @include center-xy();
   justify-content: center;
   align-items: center;
 }
 
-.turkey-logo {
-  @include square-logo(5rem);
+.turkey-logo__container {
+  @include flex-row();
+  @include center-xy();
+  // @include square-logo(5rem);
   @include fix-location(left);
   margin-left: 1rem;
+}
+
+.turkey-logo {
+  filter: invert(1) opacity(0.4) $main-drop-shadow;
+  @include square-logo(5rem);
+  @include flex-column();
+  @include center-xy();
   background-image: url('../assets/turkey1.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  filter: invert(1) opacity(0.4) $main-drop-shadow;
+  &:hover {
+    cursor: pointer;
+    transition: $transition-button;
+    transform: scale(1.025);
+  }
+  & p {
+    font-size: .7rem;
+    color: white;
+    padding: 1rem 1.3rem 0 0;
+  }
+}
+
+.about {
+  opacity: 0;
+  width: 12rem;
+  @include flex-row();
+  margin-left: 1rem;
+  padding: 1rem;
+  background: #ECEAEC;
+  font-size: .75rem;
+  border-radius: 1rem;
 }
 
 nav {

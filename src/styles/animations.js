@@ -15,7 +15,7 @@ const animations = {
         opacity: 0,
         y: 100
       }, '<')
-      .from('.turkey-logo', {
+      .from('.turkey-logo__container', {
         duration: .5,
         opacity: 0,
         x: -100
@@ -121,6 +121,22 @@ const animations = {
         duration: 0,
         opacity: 1
       }, '<')
+  },
+
+  toggleBlurb(isOpen) {
+    if (!isOpen) {
+      return timeline
+        .to('.about', {
+          duration: 0.25,
+          opacity: 1
+        })
+    } else {
+      return timeline
+        .to('.about', {
+          duration: 0.25,
+          opacity: 0
+        })
+    }
   }
 }
 
