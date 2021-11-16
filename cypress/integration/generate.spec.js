@@ -5,10 +5,6 @@ describe('generate new fact page', () => {
     cy.visit(url)
   })
 
-  beforeEach(() => {
-
-  })
-
   it('should display the root url when the landing page is visited', () => {
     cy.url().should('not.include', 'saved')
   })
@@ -36,8 +32,6 @@ describe('generate new fact page', () => {
 
   it('should display a new fact when the new-fact button is clicked', () => {
     cy.get('.new-fact').click()
-      .get('.loading-message')
-      .should('be.visible')
       .get('.current-fact__container')
         .should('contain', 'did you know')
   })
