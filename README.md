@@ -52,6 +52,8 @@ Dropdown menu - user can toggle between two color modes (sunrise & dusk)
 - Building with Context from the beginning of the project
 - Hitting the ground running with Router 6 just a couple days after it was released
 - Getting my first responsive design for mobile done
+- Building a hamburger menu
+- Getting familiar with GSAP
 
 ## Challenges
 
@@ -75,7 +77,9 @@ If you'd like to run this repo locally:
 
 ## Future Features
 
--
+- Different language options
+- Back end to handle user accounts
+- Progressive web app
 
 ## Contributors
 
