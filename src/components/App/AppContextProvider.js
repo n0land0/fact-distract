@@ -1,11 +1,12 @@
-import React, { createContext, useState, useEffect, useReducer } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components';
-import { darkMode, lightMode, GlobalStyles } from '../styles/palettes';
-import fetchCalls from '../fetchCalls';
+import { darkMode, lightMode, GlobalStyles } from '../../styles/palettes';
 import Header from './Header/Header';
-import heart from '../assets/heart.png';
-import brokenHeart from '../assets/broken_heart.png';
+import fetchCalls from '../../fetchCalls';
+import animations from '../../styles/animations';
+import heart from '../../assets/heart.png';
+import brokenHeart from '../../assets/broken_heart.png';
 
 export const AppContext = createContext();
 
@@ -15,14 +16,14 @@ const App = () => {
   const [ user, setUser ] = useState('Hingle McCringleberry');
   const [ currentFact, setCurrentFact ] = useState('');
   const [ recentFacts, setRecentFacts ] = useState([
-    "Swag thundercats 3 wolf moon, mumblecore paleo pop-up pickled vegan fixie before they sold out tbh",
-    "Offal jianbing palo santo, shabby chic semiotics vape organic art party affogato poutine vice vinyl banh mi.",
-    "Chicharrones drinking vinegar tilde master cleanse snackwave adaptogen DIY tattooed"
+    // "Swag thundercats 3 wolf moon, mumblecore paleo pop-up pickled vegan fixie before they sold out tbh",
+    // "Offal jianbing palo santo, shabby chic semiotics vape organic art party affogato poutine vice vinyl banh mi.",
+    // "Chicharrones drinking vinegar tilde master cleanse snackwave adaptogen DIY tattooed"
   ]);
   const [ savedFacts, setSavedFacts ] = useState([
-    "I'm baby ramps synth chartreuse street art pork belly, tofu banh mi iPhone small batch photo booth farm-to-table beard selvage lomo PBR&B",
-    "Sriracha dreamcatcher cronut tbh quinoa organic butcher keytar pour-over cloud bread offal ethical occupy bitters",
-    "Green juice pork belly lumbersexual direct trade kombucha jean shorts roof party shoreditch bitters umami everyday carry lyft intelligentsia tofu"
+    // "I'm baby ramps synth chartreuse street art pork belly, tofu banh mi iPhone small batch photo booth farm-to-table beard selvage lomo PBR&B",
+    // "Sriracha dreamcatcher cronut tbh quinoa organic butcher keytar pour-over cloud bread offal ethical occupy bitters",
+    // "Green juice pork belly lumbersexual direct trade kombucha jean shorts roof party shoreditch bitters umami everyday carry lyft intelligentsia tofu"
   ]);
   // const [ paletteMode, setPaletteMode ] = useState('dark');
   const [ paletteMode, setPaletteMode ] = useState(
@@ -41,10 +42,8 @@ const App = () => {
     if (savedFacts.includes(fact)) {
       const filteredFacts = savedFacts.filter(savedFact => savedFact !== fact);
       setSavedFacts(filteredFacts);
-      // saveButtonStatus = 'save-fact';
     } else {
       setSavedFacts([fact, ...savedFacts]);
-      // saveButtonStatus = 'unsave-fact';
     }
   }
 
@@ -69,14 +68,23 @@ const App = () => {
     user, currentFact, recentFacts, savedFacts, language, allLanguages, setUser, setCurrentFact, setRecentFacts, moveToRecentFacts, setSavedFacts, addOrRemoveSavedFact, displayButtonText, setLanguage, paletteMode, setPaletteMode, togglePalette, open, setOpen
   }
 
+  // page load/app mount only
   useEffect(() => {
+    animations.renderPageElements();
+  }, [])
+
+  // change in recent facts triggers new fact
+  useEffect(() => {
+    animations.renderRecentFacts();
+    animations.renderLoadingMessage();
     fetchCalls.getNewFact(language)
       .then(newFact => {
         // buying time to display loading animation
         setTimeout(() => {
           setCurrentFact(newFact)
         }, 2000)
-      })
+      }
+    );
   }, [ recentFacts ])
 
   return (
@@ -97,10 +105,3 @@ const App = () => {
 }
 
 export default App;
-
-
-// import { AppContext } from
-//
-// const {
-//  user, currentFact, recentFacts, savedFacts, language, allLanguages, setUser, setCurrentFact, setRecentFacts, moveToRecentFacts, setSavedFacts, addOrRemoveSavedFact, displayButtonText, setLanguage, paletteMode, setPaletteMode, togglePalette
-// } = useContext(AppContext);

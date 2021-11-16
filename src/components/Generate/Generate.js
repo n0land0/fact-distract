@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import CurrentFact from './CurrentFact/CurrentFact';
 import RecentFacts from './RecentFacts/RecentFacts';
 

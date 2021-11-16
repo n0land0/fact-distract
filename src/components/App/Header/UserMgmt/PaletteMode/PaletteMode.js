@@ -6,9 +6,9 @@ const PaletteMode = () => {
     paletteMode, togglePalette
   } = useContext(AppContext);
 
-  const newPalette = paletteMode === 'dark'
-    ? 'light'
-    : 'dark';
+  // const newPalette = paletteMode === 'dark'
+  //   ? 'light'
+  //   : 'dark';
 
   return (
     <div className='toggle-switch'>

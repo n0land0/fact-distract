@@ -70,7 +70,7 @@
   // border: 2px solid black;
   border-radius: 1rem;
   box-shadow: $main-box-shadow;
-  transition: $transition-button;
+  // transition: $transition-button;
 }
 
 .recent-facts__header {
@@ -85,13 +85,32 @@
   padding: 1rem;
 }
 
+.no-recents-message {
+  height: 100%;
+  @include flex-column();
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+  & h2 {
+    margin: 1rem;
+  }
+}
+
+.no-recents-message__info {
+  font-size: 2rem;
+}
+
+.no-recents-message__cta {
+  font-size: 1.5rem;
+}
+
 .recent-fact-1__container,
 .recent-fact-2__container,
 .recent-fact-3__container {
   @include flex-row();
   // justify-content: center;
   @include center-xy();
-  @include responsive('width', 55%, (
+  @include responsive('width', 60%, (
     1200px: 75%,
     375px: 75%,
   ));
