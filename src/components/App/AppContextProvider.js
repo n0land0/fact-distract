@@ -13,6 +13,7 @@ export const AppContext = createContext();
 const StyledApp = styled.main``;
 
 const App = () => {
+  const [ error, setError ] = useState(null);
   const [ user, setUser ] = useState('Hingle McCringleberry');
   const [ currentFact, setCurrentFact ] = useState('');
   const [ recentFacts, setRecentFacts ] = useState([
@@ -63,7 +64,7 @@ const App = () => {
   const [ open, setOpen ] = useState(false);
 
   const value = {
-    user, currentFact, recentFacts, savedFacts, language, allLanguages, setUser, setCurrentFact, setRecentFacts, moveToRecentFacts, setSavedFacts, addOrRemoveSavedFact, displayButtonText, setLanguage, paletteMode, setPaletteMode, togglePalette, open, setOpen
+    error, user, currentFact, recentFacts, savedFacts, language, allLanguages, setUser, setCurrentFact, setRecentFacts, moveToRecentFacts, setSavedFacts, addOrRemoveSavedFact, displayButtonText, setLanguage, paletteMode, setPaletteMode, togglePalette, open, setOpen
   }
 
   // page load/app mount only
@@ -82,7 +83,7 @@ const App = () => {
           setCurrentFact(newFact)
         }, 2000)
       }
-    );
+    ).catch(error => setError(error));
   }, [ recentFacts ])
 
   return (

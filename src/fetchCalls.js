@@ -1,7 +1,10 @@
 const fetchCalls = {
   getNewFact(language) {
     return fetch(`https://uselessfacts.jsph.pl/random.json?language=${language}`)
-      .then(response => response.json())
+      .then(response => {
+        this.checkResponse(response);
+        return response.json();
+      })
       .then(factObj => factObj.text)
       .then(factText =>
         this.cleanResponse(factText)
@@ -23,6 +26,21 @@ const fetchCalls = {
       }
       return word
     }).join(' ')
+  },
+
+  checkResponse(response) {
+    if (!response.ok) {
+      console.log(response)
+      if (response.status === 422 || response.status === 403) {
+        throw new Error('Sorry, we can\'t find an account with these credentials. Please try again.')
+      } else if (response.status === 404) {
+        throw new Error('The page you are looking for doesn\'t exist')
+      } else if (response.status >= 500) {
+        throw new Error('We\'re having issues on our end. Please try again later.')
+      } else {
+        throw new Error('Please check your network connection')
+      }
+    }
   }
 }
 
