@@ -1,5 +1,18 @@
+// Will have to look into why some of this behavior changed with animation
+
 describe('generate new fact page', () => {
   const url = 'localhost:3000';
+
+  beforeEach(() => {
+    cy.intercept('GET', 'https://uselessfacts.jsph.pl/random.json?language=en', {
+        "id": "d4eda268-f4f8-47e4-bca3-d8ff299f8f3b",
+        "text": "The electric chair was invented by a dentist.",
+        "source": "djtech.net",
+        "source_url": "http://www.djtech.net/humor/useless_facts.htm",
+        "language": "en",
+        "permalink": "https://uselessfacts.jsph.pl/d4eda268-f4f8-47e4-bca3-d8ff299f8f3b"
+    })
+  })
 
   before(() => {
     cy.visit(url)
@@ -10,18 +23,8 @@ describe('generate new fact page', () => {
   })
 
   it('should display a new fact when the landing page is visited', () => {
-    // why is stub not substituting for the new fact?
-    // cy.intercept('GET', 'https://uselessfacts.jsph.pl/random.json?language=en', {
-    //     "id": "d4eda268-f4f8-47e4-bca3-d8ff299f8f3b",
-    //     "text": "The electric chair was invented by a dentist.",
-    //     "source": "djtech.net",
-    //     "source_url": "http://www.djtech.net/humor/useless_facts.htm",
-    //     "language": "en",
-    //     "permalink": "https://uselessfacts.jsph.pl/d4eda268-f4f8-47e4-bca3-d8ff299f8f3b"
-    // })
-
     cy.get('.current-fact__container')
-      .should('contain', 'did you know')
+        .should('contain', 'did you know')
   })
 
   it('should display a loading message before a new fact loads', () => {
@@ -34,12 +37,14 @@ describe('generate new fact page', () => {
     cy.get('.new-fact').click()
       .get('.current-fact__container')
         .should('contain', 'did you know')
+      .get('.current-fact__text')
+        .should('contain', 'The electric chair was invented by a dentist')
   })
 
   it('should display recently generated facts', () => {
     cy.get('.recent-facts-container')
       .get('.recent-fact-1__container')
-      .get('.recent-fact-1__text')
+      // .get('.recent-fact-1__text')
       .should('be.visible')
   })
 
