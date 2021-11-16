@@ -62,7 +62,7 @@ Dropdown menu - user can toggle between two color modes (sunrise & dusk)
 
 ## Install/ Set Up Instructions
 
-The deployed app can be viewed [here](fact-distract.surge.sh).
+The deployed app can be viewed [here](https://fact-distract.surge.sh).
 
 If you'd like to run this repo locally:
 
