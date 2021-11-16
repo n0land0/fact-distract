@@ -27,7 +27,9 @@ Saved facts page (mobile)
 <img width="375" alt="Screen Shot 2021-11-15 at 12 27 13 AM" src="https://user-images.githubusercontent.com/79823098/141739622-8c4d2679-7f4a-4a1d-8f20-d1b3856f23e9.png">
 
 Landing page - user can generate and save new dumb facts and view their recent history
+
 Saved facts page - user can see facts they've previously saved
+
 Dropdown menu - user can toggle between two color modes (sunrise & dusk)
 
 ## Technologies
