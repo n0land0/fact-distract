@@ -13,11 +13,6 @@ describe('generate new fact page', () => {
     cy.url().should('not.include', 'saved')
   })
 
-  it('should display a loading message before a new fact loads', () => {
-    cy.get('.loading-message')
-      .should('contain', 'loading factoid')
-  })
-
   it('should display a new fact when the landing page is visited', () => {
     // why is stub not substituting for the new fact?
     // cy.intercept('GET', 'https://uselessfacts.jsph.pl/random.json?language=en', {
@@ -31,6 +26,12 @@ describe('generate new fact page', () => {
 
     cy.get('.current-fact__container')
       .should('contain', 'did you know')
+  })
+
+  it('should display a loading message before a new fact loads', () => {
+    cy.get('.new-fact').click()
+      .get('.loading-message')
+      .should('contain', 'loading factoid')
   })
 
   it('should display a new fact when the new-fact button is clicked', () => {
@@ -58,9 +59,17 @@ describe('generate new fact page', () => {
   })
 
   it('should reflect reflect whether a fact has been saved via its button', () => {
-    cy.get('.save-fact').first()
-      .should('contain', '💜')
-      .click()
-      .should('contain', '💔')
+    cy.get('.recent-facts-container')
+      .get('img').first()
+      .should(($img) => {
+        const className = $img[0].className;
+        expect(className).to.eq('heart-icon');
+      })
+      .get('.save-fact').first().click()
+      .get('img').first()
+      .should(($img) => {
+        const className = $img[0].className;
+        expect(className).to.eq('broken-heart-icon');
+      })
   })
 })
