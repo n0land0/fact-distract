@@ -5,10 +5,6 @@ describe('saved facts page', () => {
     cy.visit(url)
   })
 
-  beforeEach(() => {
-
-  })
-
   it('should display the correct url when the page is visited', () => {
     cy.get('.saved').click()
       .url().should('include', '/saved')

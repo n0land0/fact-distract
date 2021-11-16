@@ -14,8 +14,6 @@
 }
 
 .saved-facts__header {
-  // position: relative;
-  // bottom: 3rem;
   font-size: 1.5rem;
 }
 
@@ -26,7 +24,6 @@
     1200px: 'column',
     375px: 'column',
   ));
-  // @include flex-row();
   align-items: center;
   text-align: center;
   overflow-y: scroll;
@@ -39,10 +36,6 @@
   ));
 }
 
-.saved-fact__unsave-fact-button {
-
-}
-
 .prompt-container {
   @include flex-column();
   @include center-xy();
@@ -51,8 +44,4 @@
 .prompt__text {
   font-size: 3rem;
   margin: 1rem;
-}
-
-.prompt__go-home-btn {
-
 }

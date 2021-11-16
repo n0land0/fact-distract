@@ -6,7 +6,7 @@ const Nav = () => {
   return (
     <nav className='navbar'>
       <NavLink to='/' className='navbar__navlink generate' activeClassName='navlink-active'>
-        new fact
+        get facts
       </NavLink>
       <NavLink to='/saved' className='navbar__navlink saved' activeClassName='navlink-active'>
         saved facts

@@ -13,19 +13,10 @@ export const AppContext = createContext();
 const StyledApp = styled.main``;
 
 const App = () => {
-  const [ user, setUser ] = useState('Hingle McCringleberry');
+  const [ error, setError ] = useState(null);
   const [ currentFact, setCurrentFact ] = useState('');
-  const [ recentFacts, setRecentFacts ] = useState([
-    // "Swag thundercats 3 wolf moon, mumblecore paleo pop-up pickled vegan fixie before they sold out tbh",
-    // "Offal jianbing palo santo, shabby chic semiotics vape organic art party affogato poutine vice vinyl banh mi.",
-    // "Chicharrones drinking vinegar tilde master cleanse snackwave adaptogen DIY tattooed"
-  ]);
-  const [ savedFacts, setSavedFacts ] = useState([
-    // "I'm baby ramps synth chartreuse street art pork belly, tofu banh mi iPhone small batch photo booth farm-to-table beard selvage lomo PBR&B",
-    // "Sriracha dreamcatcher cronut tbh quinoa organic butcher keytar pour-over cloud bread offal ethical occupy bitters",
-    // "Green juice pork belly lumbersexual direct trade kombucha jean shorts roof party shoreditch bitters umami everyday carry lyft intelligentsia tofu"
-  ]);
-  // const [ paletteMode, setPaletteMode ] = useState('dark');
+  const [ recentFacts, setRecentFacts ] = useState([]);
+  const [ savedFacts, setSavedFacts ] = useState([]);
   const [ paletteMode, setPaletteMode ] = useState(
     localStorage.getItem('paletteMode') ? localStorage.getItem('paletteMode') : 'dark'
   );
@@ -54,18 +45,22 @@ const App = () => {
   }
 
   const togglePalette = () => {
-    console.log(paletteMode)
     paletteMode === 'dark'
       ? setPaletteMode('light')
       : setPaletteMode('dark')
-      console.log(paletteMode)
       // localStorage.setItem('paletteMode', paletteMode)
   }
 
   const [ open, setOpen ] = useState(false);
 
   const value = {
-    user, currentFact, recentFacts, savedFacts, language, allLanguages, setUser, setCurrentFact, setRecentFacts, moveToRecentFacts, setSavedFacts, addOrRemoveSavedFact, displayButtonText, setLanguage, paletteMode, setPaletteMode, togglePalette, open, setOpen
+    error,
+    currentFact, recentFacts, savedFacts,
+    language, allLanguages, setLanguage,
+    setCurrentFact, setRecentFacts, setSavedFacts,
+    moveToRecentFacts, addOrRemoveSavedFact, displayButtonText,
+    paletteMode, setPaletteMode, togglePalette,
+    open, setOpen
   }
 
   // page load/app mount only
@@ -84,7 +79,7 @@ const App = () => {
           setCurrentFact(newFact)
         }, 2000)
       }
-    );
+    ).catch(error => setError(error));
   }, [ recentFacts ])
 
   return (

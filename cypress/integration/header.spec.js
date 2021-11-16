@@ -5,10 +5,6 @@ describe('header', () => {
     cy.visit(url)
   })
 
-  beforeEach(() => {
-
-  })
-
   it('should show a logo', () => {
     cy.get('.turkey-logo')
       .should('be.visible')

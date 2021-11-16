@@ -1,7 +1,5 @@
 .generate-container {
   display: flex;
-  // @include flex-row();
-  // flex-direction: row-reverse;
   @include responsive('height', 71.5%, (
     1200px: 80vh,
     375px: 80vh,
@@ -14,7 +12,6 @@
     1200px: 'center',
     375px: 'center',
   ));
-  // @include responsive('width', )
 }
 
 .current-fact__container,
@@ -31,16 +28,12 @@
 
 // current
 .current-fact__container {
-  // width: 45vw;
-  // margin: 2.5vw;
   @include flex-column();
   @include center-xy();
   @include responsive('height', '', (
     1200px: 28rem,
     375px: 28rem,
   ));
-  // border-radius: 1rem;
-  // box-shadow: $main-box-shadow;
 }
 
 .loading-message {
@@ -63,18 +56,13 @@
 
 // recents
 .recent-facts-container {
-  // width: 45vw;
   height: 65vh;
-  // margin: 2.5vw;
   @include flex-column();
-  // border: 2px solid black;
   border-radius: 1rem;
   box-shadow: $main-box-shadow;
-  // transition: $transition-button;
 }
 
 .recent-facts__header {
-  // align-self: center;
   position: absolute;
   width: 0;
   height: 0;
@@ -108,7 +96,6 @@
 .recent-fact-2__container,
 .recent-fact-3__container {
   @include flex-row();
-  // justify-content: center;
   @include center-xy();
   @include responsive('width', 60%, (
     1200px: 75%,
@@ -118,9 +105,6 @@
 }
 
 .recent-fact-1__container {
-  // border-bottom: 2px solid black;
-  // border-left: 2px solid black;
-  // width: 55%;
   height: 33%;
   align-self: flex-end;
   text-align: right;
@@ -128,10 +112,6 @@
 }
 
 .recent-fact-2__container {
-  // border: 2px solid black;
-  // border-left: 2px solid black;
-  // border-right: 2px solid black;
-  // width: 55%;
   height: 34%;
   align-self: center;
   text-align: center;
@@ -139,14 +119,10 @@
 }
 
 .recent-fact-3__container {
-  // border-top: 2px solid black;
-  // border-right: 2px solid black;
-  // width: 55%;
   height: 33%;
   align-self: flex-start;
   border-radius: 0 0 0 1rem;
 }
-
 
 .recent-fact-1__text,
 .recent-fact-2__text,
@@ -157,4 +133,10 @@
     800px: '1.25rem',
     375px: '1.15rem',
   ));
+}
+
+.error {
+  align-self: center;
+  color: white;
+  font-size: 2rem;
 }

@@ -54,14 +54,6 @@ const animations = {
         duration: 1.25,
         opacity: 0
       })
-      .from('.current-fact__did-you-know', {
-        duration: .25,
-        opacity: 0
-      })
-      .from('.current-fact__text', {
-        duration: .25,
-        opacity: 0
-      })
   },
 
   renderLoadingMessage() {
@@ -75,30 +67,18 @@ const animations = {
 
   renderRecentFacts() {
     return timeline
-      // .from('.recent-fact-1__container', {
-      //   duration: .25,
-      //   opacity: 0
-      // })
       .from('.recent-fact-1__text', {
         duration: .35,
         opacity: 0,
         x: '+= 50',
         y: '-= 20'
       })
-      // .from('.recent-fact-2__container', {
-      //   duration: .25,
-      //   opacity: 0
-      // })
       .from('.recent-fact-2__text', {
         duration: .35,
         opacity: 0,
         x: '+= 50',
         y: '-= 20'
       })
-      // .from('.recent-fact-3__container', {
-      //   duration: .25,
-      //   opacity: 0
-      // })
       .from('.recent-fact-3__text', {
         duration: .35,
         opacity: 0,
