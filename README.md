@@ -54,7 +54,7 @@ Dropdown menu - user can toggle between two color modes (sunrise & dusk)
 - [react-elastic-carousel](https://www.npmjs.com/package/react-elastic-carousel)
 - [Styled Components](https://styled-components.com/)
 - [Random Useless Facts API](https://uselessfacts.jsph.pl/)
-- Responsive mixin borrowed from [@maxluster](https://gist.github.com/maxluster/168e650267bac9faaafd)
+- Responsive mixin from [@maxluster](https://gist.github.com/maxluster/168e650267bac9faaafd)
 
 ## Wins
 
