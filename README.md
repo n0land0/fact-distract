@@ -37,6 +37,8 @@ Dropdown menu - user can toggle between two color modes (sunrise & dusk)
 - As this project was built with SCSS, all stylesheets are contained within the src/styles directory
 - Dynamic styling for dark/light mode and animations are also contained within the src/styles directory
 - Component directories are nested within the directories of their parent components to mirror the code architecture
+- All routes defined in index.js
+- App/AppContextProvider contains all props and type validation
 
 ## Technologies
 
