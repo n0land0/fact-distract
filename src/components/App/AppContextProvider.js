@@ -85,8 +85,6 @@ const App = () => {
         }, 2000)
       }
     );
-
-    // return animations.hideRecentFacts();
   }, [ recentFacts ])
 
   return (
