@@ -1,5 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
 import { darkMode, lightMode, GlobalStyles } from '../../styles/palettes';
 import Header from './Header/Header';
@@ -13,7 +14,7 @@ export const AppContext = createContext();
 const StyledApp = styled.main``;
 
 const App = () => {
-  const [ error, setError ] = useState(null);
+  const [ error, setError ] = useState('');
   const [ currentFact, setCurrentFact ] = useState('');
   const [ recentFacts, setRecentFacts ] = useState([]);
   const [ savedFacts, setSavedFacts ] = useState([]);
@@ -51,16 +52,13 @@ const App = () => {
       // localStorage.setItem('paletteMode', paletteMode)
   }
 
-  const [ open, setOpen ] = useState(false);
-
   const value = {
     error,
     currentFact, recentFacts, savedFacts,
     language, allLanguages, setLanguage,
     setCurrentFact, setRecentFacts, setSavedFacts,
     moveToRecentFacts, addOrRemoveSavedFact, displayButtonText,
-    paletteMode, setPaletteMode, togglePalette,
-    open, setOpen
+    paletteMode, setPaletteMode, togglePalette
   }
 
   // page load/app mount only
@@ -100,3 +98,24 @@ const App = () => {
 }
 
 export default App;
+
+AppContext.Provider.propTypes = {
+  value: PropTypes.shape({
+    error: PropTypes.string.isRequired,
+    currentFact: PropTypes.string.isRequired,
+    recentFacts: PropTypes.array.isRequired,
+    savedFacts: PropTypes.array.isRequired,
+    language: PropTypes.string.isRequired,
+    allLanguages: PropTypes.array.isRequired,
+    setLanguage: PropTypes.func.isRequired,
+    setCurrentFact: PropTypes.func.isRequired,
+    setRecentFacts: PropTypes.func.isRequired,
+    setSavedFacts: PropTypes.func.isRequired,
+    moveToRecentFacts: PropTypes.func.isRequired,
+    addOrRemoveSavedFact: PropTypes.func.isRequired,
+    displayButtonText: PropTypes.func.isRequired,
+    paletteMode: PropTypes.string.isRequired,
+    setPaletteMode: PropTypes.func.isRequired,
+    togglePalette: PropTypes.func.isRequired
+  })
+}

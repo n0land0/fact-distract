@@ -5,10 +5,10 @@ const Nav = () => {
 
   return (
     <nav className='navbar'>
-      <NavLink to='/' className='navbar__navlink generate' activeClassName='navlink-active'>
+      <NavLink to='/' className='navbar__navlink generate' activeclassname='navlink-active'>
         get facts
       </NavLink>
-      <NavLink to='/saved' className='navbar__navlink saved' activeClassName='navlink-active'>
+      <NavLink to='/saved' className='navbar__navlink saved' activeclassname='navlink-active'>
         saved facts
       </NavLink>
     </nav>
