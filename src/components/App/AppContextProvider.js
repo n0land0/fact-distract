@@ -52,16 +52,13 @@ const App = () => {
       // localStorage.setItem('paletteMode', paletteMode)
   }
 
-  const [ open, setOpen ] = useState(false);
-
   const value = {
     error,
     currentFact, recentFacts, savedFacts,
     language, allLanguages, setLanguage,
     setCurrentFact, setRecentFacts, setSavedFacts,
     moveToRecentFacts, addOrRemoveSavedFact, displayButtonText,
-    paletteMode, setPaletteMode, togglePalette,
-    open, setOpen
+    paletteMode, setPaletteMode, togglePalette
   }
 
   // page load/app mount only
@@ -119,8 +116,6 @@ AppContext.Provider.propTypes = {
     displayButtonText: PropTypes.func.isRequired,
     paletteMode: PropTypes.string.isRequired,
     setPaletteMode: PropTypes.func.isRequired,
-    togglePalette: PropTypes.func.isRequired,
-    open: PropTypes.bool.isRequired,
-    setOpen: PropTypes.func.isRequired,
+    togglePalette: PropTypes.func.isRequired
   })
 }
