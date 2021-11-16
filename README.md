@@ -32,6 +32,12 @@ Saved facts page - user can see facts they've previously saved
 
 Dropdown menu - user can toggle between two color modes (sunrise & dusk)
 
+## Architecture Notes
+
+- As this project was built with SCSS, all stylesheets are contained within the src/styles directory
+- Dynamic styling for dark/light mode and animations are also contained within the src/styles directory
+- Component directories are nested within the directories of their parent components to mirror the code architecture
+
 ## Technologies
 
 ### Front End
@@ -51,10 +57,9 @@ Dropdown menu - user can toggle between two color modes (sunrise & dusk)
 
 ## Wins
 
-- Building with Context from the beginning of the project
+- Building with Context from the beginning of the project, for both data and styling
 - Hitting the ground running with Router 6 just a couple days after it was released
 - Getting my first responsive design for mobile done
-- Building a hamburger menu
 - Getting familiar with GSAP
 
 ## Challenges
