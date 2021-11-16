@@ -1,4 +1,3 @@
-// Provides a simplified syntax for chaining media queries across named or numeric breakpoints
 @mixin responsive($properties, $default-value, $responsive-values){
 
   // No named breakpoints by default
@@ -42,8 +41,6 @@
   }
 
 }
-
-// Extras!
 
 // Use $named-breakpoints with block-style media queries
 @mixin named-breakpoint($breakpoint){

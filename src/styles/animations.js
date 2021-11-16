@@ -54,14 +54,6 @@ const animations = {
         duration: 1.25,
         opacity: 0
       })
-      .from('.current-fact__did-you-know', {
-        duration: .25,
-        opacity: 0
-      })
-      .from('.current-fact__text', {
-        duration: .25,
-        opacity: 0
-      })
   },
 
   renderLoadingMessage() {

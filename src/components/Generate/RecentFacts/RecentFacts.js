@@ -13,6 +13,8 @@ const RecentFacts = () => {
   }
 
   let iconClass1 = iconClass(recentFact1);
+  let iconClass2 = iconClass(recentFact2);
+  let iconClass3 = iconClass(recentFact3);
 
   let buttonText1 = displayButtonText(recentFact1);
   let buttonText2 = displayButtonText(recentFact2);
@@ -46,7 +48,7 @@ const RecentFacts = () => {
           onClick={ () => addOrRemoveSavedFact(recentFact2) }
           aria-label='save or unsave this fact'
         >
-          <img className='heart-icon' src={ buttonText2 } alt='heart icon' />
+          <img className={ iconClass2 } src={ buttonText2 } alt='heart icon' />
         </button>
       </article> }
       { recentFact3 && <article className='recent-fact-3__container'>
@@ -56,7 +58,7 @@ const RecentFacts = () => {
           onClick={ () => addOrRemoveSavedFact(recentFact3) }
           aria-label='save or unsave this fact'
         >
-          <img className='heart-icon' src={ buttonText3 } alt='heart icon' />
+          <img className={ iconClass3 } src={ buttonText3 } alt='heart icon' />
         </button>
       </article> }
     </section>

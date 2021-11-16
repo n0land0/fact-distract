@@ -34,7 +34,6 @@ button,
   height: .25rem;
   margin: .2rem;
   border-radius: 3px;
-  //   transform-origin: 1px;
 }
 
 .current-fact__buttons-container {
@@ -42,14 +41,6 @@ button,
   height: 4.5rem;
   @include flex-row();
   justify-content: space-around;
-}
-
-.current-fact__button {
-
-}
-
-.recent-fact__button {
-
 }
 
 .save-fact,

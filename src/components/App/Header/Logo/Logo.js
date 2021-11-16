@@ -1,6 +1,5 @@
 import React from 'react';
 import animations from '../../../../styles/animations';
-// import turkeyLogo from '../../../../assets/turkey1.png';
 
 const Logo = () => {
   let isOpen = false;
