@@ -71,7 +71,7 @@ Dropdown menu - user can toggle between two color modes (sunrise & dusk)
 - Writing tests for incoming data was challenging, partly because it was randomized and partly because it was animated on the page and the timing became hard to predict
 - Had to take a couple days off, as a very full work slate and extremely taxing previous project had led to serious burnout, so this project timeline was shorter than I'd have liked
 
-## Install/ Set Up Instructions
+## Viewing & Installation
 
 The deployed app can be viewed [here](https://fact-distract.surge.sh).
 
