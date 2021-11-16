@@ -17,7 +17,9 @@ const App = () => {
   const [ error, setError ] = useState('');
   const [ currentFact, setCurrentFact ] = useState('');
   const [ recentFacts, setRecentFacts ] = useState([]);
-  const [ savedFacts, setSavedFacts ] = useState([]);
+  const [ savedFacts, setSavedFacts ] = useState(
+    JSON.parse(localStorage.getItem('savedFacts')) || []
+  );
   const [ paletteMode, setPaletteMode ] = useState(
     localStorage.getItem('paletteMode') ? localStorage.getItem('paletteMode') : 'dark'
   );
@@ -34,8 +36,10 @@ const App = () => {
     if (savedFacts.includes(fact)) {
       const filteredFacts = savedFacts.filter(savedFact => savedFact !== fact);
       setSavedFacts(filteredFacts);
+      localStorage.setItem('savedFacts', JSON.stringify(filteredFacts));
     } else {
       setSavedFacts([fact, ...savedFacts]);
+      localStorage.setItem('savedFacts', JSON.stringify([fact, ...savedFacts]));
     }
   }
 
