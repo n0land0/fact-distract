@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { AppContext } from '../../App/AppContextProvider';
 
 const RecentFacts = () => {
-  const { recentFacts, savedFacts, addOrRemoveSavedFact, displayButtonText } = useContext(AppContext);
+  const { recentFacts, addOrRemoveSavedFact, displayButtonText } = useContext(AppContext);
 
   const [ recentFact1, recentFact2, recentFact3 ] = recentFacts;
 

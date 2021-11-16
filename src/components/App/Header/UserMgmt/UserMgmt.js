@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
 import { AppContext } from '../../AppContextProvider';
 import LanguageSelect from './LanguageSelect/LanguageSelect';
 import PaletteMode from './PaletteMode/PaletteMode';

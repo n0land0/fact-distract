@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../../App/AppContextProvider';
-import animations from '../../../styles/animations';
 
 const CurrentFact = () => {
   const { currentFact, moveToRecentFacts, addOrRemoveSavedFact, displayButtonText } = useContext(AppContext);

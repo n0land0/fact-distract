@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect, useReducer } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components';
 import { darkMode, lightMode, GlobalStyles } from '../../styles/palettes';
