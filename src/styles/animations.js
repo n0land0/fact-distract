@@ -110,12 +110,20 @@ const animations = {
           duration: 0.25,
           opacity: 1
         })
+        .from('.about', {
+          duration: 0.25,
+          x: -100
+        }, '<')
     } else {
       return timeline
         .to('.about', {
           duration: 0.25,
           opacity: 0
         })
+        .from('.about', {
+          duration: 0.25,
+          x: 0
+        }, '<')
     }
   }
 }

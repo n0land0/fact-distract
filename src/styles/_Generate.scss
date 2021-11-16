@@ -40,6 +40,7 @@
   font-family: $header-font;
   font-size: 5rem;
   color: pink;
+  text-align: center;
 }
 
 .current-fact__did-you-know {
@@ -48,7 +49,11 @@
 }
 
 .current-fact__text {
-  font-size: 2.25rem;
+  // font-size: 2.25rem;
+  @include responsive('font-size', 2.25rem, (
+    1200px: 2rem,
+    375px: 2rem,
+  ));
   text-align: center;
   margin: 1rem 0;
   text-shadow: $main-text-shadow;
