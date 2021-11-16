@@ -2,9 +2,17 @@ import React, { useContext } from 'react';
 import { AppContext } from '../../App/AppContextProvider';
 
 const RecentFacts = () => {
-  const { recentFacts, addOrRemoveSavedFact, displayButtonText } = useContext(AppContext);
+  const { recentFacts, savedFacts, addOrRemoveSavedFact, displayButtonText } = useContext(AppContext);
 
   const [ recentFact1, recentFact2, recentFact3 ] = recentFacts;
+
+  const iconClass = (fact) => {
+    return !savedFacts.includes(fact)
+    ? 'heart-icon'
+    : 'broken-heart-icon'
+  }
+
+  let iconClass1 = iconClass(recentFact1);
 
   let buttonText1 = displayButtonText(recentFact1);
   let buttonText2 = displayButtonText(recentFact2);
@@ -28,7 +36,7 @@ const RecentFacts = () => {
           onClick={ () => addOrRemoveSavedFact(recentFact1) }
           aria-label='save or unsave this fact'
         >
-          <img className='heart-icon' src={ buttonText1 } alt='heart icon' />
+          <img className={ iconClass1 } src={ buttonText1 } alt='heart icon' />
         </button>
       </article> }
       { recentFact2 && <article className='recent-fact-2__container'>

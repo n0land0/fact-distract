@@ -54,11 +54,9 @@ const App = () => {
   }
 
   const togglePalette = () => {
-    console.log(paletteMode)
     paletteMode === 'dark'
       ? setPaletteMode('light')
       : setPaletteMode('dark')
-      console.log(paletteMode)
       // localStorage.setItem('paletteMode', paletteMode)
   }
 

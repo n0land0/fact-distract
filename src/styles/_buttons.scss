@@ -62,9 +62,14 @@ button,
     width: 1.5rem;
     height: 1.5rem;
   }
+  &:hover .broken-heart-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }
 
-.heart-icon {
+.heart-icon,
+.broken-heart-icon {
   transition: $transition-button;
   width: 1rem;
   height: 1rem;
