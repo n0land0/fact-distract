@@ -16,20 +16,23 @@ const StyledApp = styled.main``;
 const App = () => {
   const [ error, setError ] = useState('');
   const [ currentFact, setCurrentFact ] = useState('');
-  const [ recentFacts, setRecentFacts ] = useState([]);
+  const [ recentFacts, setRecentFacts ] = useState(
+    JSON.parse(localStorage.getItem('recentFacts')) || []
+  );
   const [ savedFacts, setSavedFacts ] = useState(
     JSON.parse(localStorage.getItem('savedFacts')) || []
   );
   const [ paletteMode, setPaletteMode ] = useState(
-    localStorage.getItem('paletteMode') ? localStorage.getItem('paletteMode') : 'dark'
+    localStorage.getItem('paletteMode') || 'dark'
   );
   const [ language, setLanguage ] = useState('en');
   const allLanguages = ['en', 'de'];
 
   const moveToRecentFacts = (fact) => {
     // Context's useEffect is watching recentFacts, so this triggers a new fetch
-    setCurrentFact(null);
+    setCurrentFact('');
     setRecentFacts([fact, recentFacts[0], recentFacts[1]]);
+    localStorage.setItem('recentFacts', JSON.stringify([fact, recentFacts[0], recentFacts[1]]));
   }
 
   const addOrRemoveSavedFact = (fact) => {
