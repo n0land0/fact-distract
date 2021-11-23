@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - node
+notifications:
+  email: false
+deploy:
+  provider: surge
+  project: ./build/
+  domain: fact-distract.surge.sh
