@@ -1,5 +1,7 @@
 # fact • distract
 
+[![Build Status](https://app.travis-ci.com/n0land0/fact-distract.svg?branch=main)](https://app.travis-ci.com/n0land0/fact-distract)
+
 ## Abstract
 
 With Thanksgiving quickly approaching, many people are dreading the extremely awkward dinner-table conversations in their near futures. fact • distract provides users with a plethora of randomly generated dumb facts to make quickly changing the subject a breeze. Users who might want to curate a list in advance have the ability to save facts to a list for later use.

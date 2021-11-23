@@ -6,7 +6,6 @@
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
-    "cypress": "^9.0.0",
     "gsap": "^3.8.0",
     "history": "^5.1.0",
     "node-sass": "^6.0.1",
@@ -21,10 +20,12 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "export NODE_OPTIONS=--openssl-legacy-provider; react-scripts start",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider; react-scripts build",
+    "test": "export NODE_OPTIONS=--openssl-legacy-provider; start-server-and-test start http-get://localhost:3000 cy:run",
+    "eject": "export NODE_OPTIONS=--openssl-legacy-provider; react-scripts eject",
+    "cypress": "./node_modules/.bin/cypress open",
+    "cy:run": "cypress run"
   },
   "eslintConfig": {
     "extends": [
@@ -43,5 +44,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "cypress": "^9.0.0",
+    "start-server-and-test": "^1.14.0",
+    "surge": "^0.23.0"
   }
 }

@@ -27,8 +27,8 @@ describe('header', () => {
       .url().should('not.include', '/saved')
   })
 
-  it('should show user management settings', () => {
-    cy.get('.user-mgmt-container')
-      .should('be.visible')
-  })
+  // it('should show user management settings', () => {
+  //   cy.get('.user-mgmt-container')
+  //     .should('be.visible')
+  // })
 })
