@@ -6,7 +6,6 @@
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
-    "cypress": "^9.0.0",
     "gsap": "^3.8.0",
     "history": "^5.1.0",
     "node-sass": "^6.0.1",
@@ -47,6 +46,7 @@
     ]
   },
   "devDependencies": {
+    "cypress": "^9.0.0",
     "start-server-and-test": "^1.14.0",
     "surge": "^0.23.0"
   }
